@@ -10,11 +10,12 @@
 
     #nav{     
         margin-right: 16%;
+        height: 57px;
     }
     #lista a{
-        font-size: 81% !important;
+        font-size: 120% !important;
         display: flex;
-        padding: 22px !important;
+        padding: 14px !important;
     }
     #lista{
         padding: 0% !important;
@@ -25,7 +26,13 @@
 @media (min-width: 768px) and (max-width: 991.99px){
     #nav{
         padding: 7px 0px;
+        display: none !important;
     }
+
+    #navbarzao{
+        height: 72px !important;
+    }
+
     #lista a{
         padding: 22px !important;
     }
@@ -43,6 +50,7 @@
     #logo{
         margin-left: auto;
         margin-right: auto;
+        width: 46% !important;
     }
 
     #category{
@@ -67,6 +75,7 @@
     }
     #nav{
         padding: 7px 0px;
+        display: none !important;
     }
     #icones i{
         font-size: 70%;
@@ -114,6 +123,10 @@
         height: 56px !important;
     }
 
+    #nav{
+        display: none !important;
+    }
+
     .pesquisa{
         display: none !important;
     }
@@ -145,7 +158,7 @@
 /*nova navbar*/
 #navbarzao{
     width: auto;
-    height: 120px;
+    height: 100px;
     background-color: rgb(168, 39, 219);
     display: flex;
     padding: 0px 9%;
@@ -270,15 +283,16 @@
     transition: all 0.3s ease 0s;
 }
 
-.botão{
+#botão{
     border-bottom-right-radius: 28px;
     border-top-right-radius: 28px;
     border-style: none;
     font-size: 19px;
     padding: 11px;
+    background-color: #f1f1f1;
 }
 
-.botão:hover{
+#botão:hover{
     color: darkgray;
 }
 
@@ -291,7 +305,7 @@
 }
 
 #category{
-    padding: 14px;
+    padding: 10px;
 }
 
 #category i{

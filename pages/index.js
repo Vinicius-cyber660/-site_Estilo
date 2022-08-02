@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Button } from 'reactstrap'
+    
+
 
 export default function Home(){
   return(
@@ -28,19 +30,19 @@ export default function Home(){
     </div>
     <h1 id={styles.maisvend}>Mais Vendidos</h1>
     <Container>
-      <Row className="justify-content-md-center">
-        <Col xs lg="2">
+      <Row className={"justify-content-md-center"}>
+        <Col xs lg={"2"}>
           1 of 3
         </Col>
-        <Col md="auto">Variable width content</Col>
+        <Col md={"auto"}>Variable width content</Col>
         <Col xs lg="2">
           3 of 3
         </Col>
       </Row>
       <Row>
         <Col>1 of 3</Col>
-        <Col md="auto">Variable width content</Col>
-        <Col xs lg="2">
+        <Col md={"auto"}>Variable width content</Col>
+        <Col xs lg={"2"}>
           3 of 3
         </Col>
       </Row>

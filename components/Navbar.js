@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.css'
-import Button from 'react-bootstrap/Button';
+import React from 'react'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
 
 export default function Navbar(){
     return(<>
@@ -22,16 +23,16 @@ export default function Navbar(){
       <div id={styles.pesquisao}>
         <div className={styles.pesquisa}>
           <InputGroup className={styles.pesquisas}>
-              <Form.Control
-                id={styles.pesquisar}
-                placeholder="pesquisar..."
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-              />
-              <Button variant="outline-secondary" id="button-addon2" className={styles.botão}>
-                <i className={"fa-solid fa-magnifying-glass"} id={styles.lupa}></i>
-              </Button>
-            </InputGroup>
+            <Form.Control
+              id={styles.pesquisar}
+              placeholder="pesquisar..."
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <Button variant="outline-secondary"  id={styles.botão}>
+              <i className={"fa-solid fa-magnifying-glass"} id={styles.lupa}></i>
+            </Button>
+          </InputGroup>
         </div>
       </div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
