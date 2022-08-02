@@ -1,0 +1,228 @@
+@media (min-width: 992px){
+    
+}
+
+/*LargeTablets*/
+@media (min-width: 768px) and (max-width: 991.99px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    #cria1{
+        width: 100% !important;
+        margin-bottom: 50px;
+    }
+    #cria2{
+        width: 100% !important;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 340px) and (max-width: 767.98px){
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .child1{
+        width: 200% !important;
+    }
+    .child2{
+        margin-top: 15px;
+        width: 100% !important;
+    }
+    .child2 h3{
+        margin-top: 15px !important;
+    }
+    .child3{
+        width: 100% !important;
+    }
+
+    .child4{
+        margin-top: 15px;
+        width: 143% !important;
+    }
+
+    #containerF{
+        width: 100% !important;
+        display: flex;
+        padding: 10% !important;
+    }
+    #email{      
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #email p{
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    #email img{
+        margin-left: 0px !important;
+        width: 52%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #cria1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    #cria2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+}
+
+/*Celular*/
+@media (max-width: 339.98px){
+    
+}
+
+
+
+.footer{
+    background-color: #202121;
+    color: white;
+    height: auto;
+    display: flex;
+    padding-top: 48px;
+    padding-left: 62px;
+    padding-right: 62px;
+}
+/*descrição da loja e Whats*/
+.child1{
+    width: 70%;
+}
+
+.child1 p{
+    line-height: 28px;
+}
+
+.child1 img{
+    margin-bottom: 15px;
+}
+
+#logo2{
+    cursor: pointer;
+    width: 136px;
+}
+
+#whats{
+    display: flex;
+
+}
+#whats a{
+    margin-top: 6px;
+    margin-left: 10px;
+    color: rgb(168, 81, 168);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/*Políticas*/
+.child2{
+    width: 30%;
+    margin-left: 4%;
+}
+.child2 h3{
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.child2 a{
+    color: white;
+    line-height: 36px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.child2 a:hover{
+    color: rgb(168, 81, 168);
+    transition: all 0.4s ease 0s;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+/*Mais Informações*/
+.child3{
+    width: 30%;
+    margin-left: 4%;
+}
+.child3 h3{
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.child3 a{
+    color: white;
+    line-height: 36px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.child3 a:hover{
+    color: rgb(168, 81, 168);
+    transition: all 0.4s ease 0s;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+/*Redes Sociais*/
+.child4{
+    width: 70%;
+    margin-left: 4%;
+}
+
+.child4 h3{
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.child4 i{
+    font-size: 20px;
+    margin-right: 35px;
+}
+
+.child4 a{
+    color: white;
+}
+
+.child4 a:hover{
+    color: rgb(168, 81, 168);
+    transition: all 0.4s ease 0s;
+}
+
+/*embaixo do footer*/
+#containerF{
+    background-color: #202121;
+    padding: 10px 139px;
+}
+#email{
+    background-color: #202121;
+    color: white;
+    border-top: 1px solid rgba(238, 238, 238, 0.24);
+    padding: 19px 0px;
+    display: flex;
+    align-items: center;
+}
+#email p{
+    margin-top: 10px;
+    font-size: 19px;
+}
+#email img{
+    margin-left: auto;
+    height: 20px;
+}
+
+#cria1{
+    display: flex;
+    width: 50%;
+}
+#cria2{
+    display: flex;
+    width: 50%;
+}

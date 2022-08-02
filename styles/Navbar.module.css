@@ -1,0 +1,212 @@
+/*PC*/
+@media (min-width: 992px){
+    #menu{
+        display: none !important;
+    }
+
+    #category{    
+        margin-left: 5%;
+    }
+
+    #nav{     
+        margin-right: 16%;
+    }
+}
+
+/*LargeTablets*/
+@media (min-width: 768px) and (max-width: 991.99px){
+    .pesquisa{
+        display: none !important;
+    }
+
+    #logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #category{
+        display: none;
+    }
+
+    #icones{     
+        margin-left: auto;
+    }
+    #Logo{
+        margin-left: auto;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 340px) and (max-width: 767.98px){
+    .pesquisa{
+        display: none !important;
+    }
+
+    #logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #category{
+        display: none;
+    }
+    #icones{     
+        margin-left: auto;
+    }
+    #Logo{
+        margin-left: auto;
+    }
+}
+
+/*Celular*/
+@media (max-width: 339.98px){
+    .pesquisa{
+        display: none !important;
+    }
+
+    #logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #category{
+        display: none;
+    }
+
+    #icones{     
+        margin-left: auto;
+    }
+    #Logo{
+        margin-left: auto;
+    }
+}
+
+
+/*div com as ul`s*/
+#list{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*ícone menu*/
+#menu{
+    font-size: 200%;
+    display: flex;
+    width: 12%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/**/
+.cabecalho{
+    display: flex;
+    background-color: rgb(168, 39, 219);
+    padding: 20px 9%;
+    
+}
+
+/*mexer nas ul`s*/
+#lista{
+    display: flex;
+    list-style: none;
+    padding: 18px;
+}
+
+#lista a{
+    text-decoration: none;
+    color: rgb(168, 39, 219);
+    padding: 18px;
+    font-size: 18px;
+}
+
+#lista a:hover{
+    background-color: rgb(236, 187, 241);
+    transition: all 0.3s ease 0s;
+}
+/*classe do input pesquisa*/
+.pesquisa{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 3%;
+    width: 580px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11px;
+}
+
+/*mexer só no input*/
+.pesquisas{
+    display: flex;
+    width: 100%;
+}
+/*icones da direita*/
+#icones{
+    font-size: 200%;
+    display: flex;
+    width: 12%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#icones i{
+    margin-left: 18%;
+    
+}
+
+#logo{
+    width: 162px;
+}
+
+
+
+#pesquisar{
+    width: 83%;
+    border-bottom-left-radius: 28px;
+    border-top-left-radius: 28px;
+    border-style: none;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    font-size: 19px;
+    padding: 11px;
+}
+
+.botão{
+    border-bottom-right-radius: 28px;
+    border-top-right-radius: 28px;
+    border-style: none;
+    font-size: 19px;
+    padding: 11px;
+}
+
+.botão:hover{
+    color: darkgray;
+}
+
+#lupa{
+    margin-right: 6px;
+}
+
+#nav{
+    display: flex;
+}
+
+#category{
+    padding: 14px;
+}
+
+#category i{
+    color: rgb(99, 16, 132);
+    font-size: 26px;
+}
+
+#category a{
+    text-decoration: none;
+    color: rgb(99, 16, 132);
+    padding: 18px;
+    font-size: 25px;
+}

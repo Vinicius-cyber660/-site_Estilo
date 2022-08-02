@@ -1,0 +1,48 @@
+/*LargeTablets*/
+@media (min-width: 768px) and (max-width: 991.99px){
+    
+}
+
+/*Tablet*/
+@media (min-width: 340px) and (max-width: 844.98px){
+  #minibanners{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*Celular*/
+@media (max-width: 339.98px){
+  #minibanners{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#banner{
+  width: 100%;
+  height: 500px;
+}
+
+#banner img{
+  width: 100%;
+  height: 500px;
+}
+
+#minibanners{
+  display: flex;
+  justify-content: center;
+  margin: 0px 2%;
+}
+
+#minibanners img{
+  margin: 30px 8px;
+  border-radius: 15px;
+  width: 98%;
+}
+
+#maisvend{
+  text-align: center;
+  color: #202121;
+}
+
