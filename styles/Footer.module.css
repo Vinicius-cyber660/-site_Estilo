@@ -21,6 +21,7 @@
 @media (min-width: 340px) and (max-width: 767.98px){
 
     .footer{
+        padding: 17px 19px !important;
         display: flex;
         flex-direction: column;
     }
@@ -29,7 +30,7 @@
     }
     .child2{
         margin-top: 15px;
-        width: 100% !important;
+        width: 200% !important;
     }
     .child2 h3{
         margin-top: 15px !important;
@@ -40,7 +41,7 @@
 
     .child4{
         margin-top: 15px;
-        width: 143% !important;
+        width: 200% !important;
     }
 
     #containerF{
@@ -49,7 +50,7 @@
     }
     #email{      
         flex-direction: column;
-        width: 80%;
+        width: 100%;
     }
 
     #email p{
@@ -78,7 +79,68 @@
 
 /*Celular*/
 @media (max-width: 339.98px){
+
     
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding: 17px 19px !important;
+    }
+    .child1{
+        width: 200% !important;
+    }
+    .child2{
+        margin-top: 15px;
+        width: 100% !important;
+    }
+
+    .child2 a{
+        width: 200%;
+    }
+
+    .child2 h3{
+        margin-top: 15px !important;
+    }
+    .child3{
+        width: 100% !important;
+    }
+
+    .child4{
+        margin-top: 15px;
+        width: 200% !important;
+    }
+
+    #containerF{
+        display: flex;
+        padding: 10% !important;
+    }
+    #email{      
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #email p{
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    #email img{
+        margin-left: 0px !important;
+        width: 52%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #cria1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    #cria2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
 }
 
 

@@ -1,6 +1,6 @@
 /*PC*/
 @media (min-width: 992px){
-    #menu{
+    #menucel{
         display: none !important;
     }
 
@@ -11,12 +11,33 @@
     #nav{     
         margin-right: 16%;
     }
+    #lista a{
+        font-size: 81% !important;
+        display: flex;
+        padding: 22px !important;
+    }
+    #lista{
+        padding: 0% !important;
+    }
 }
 
 /*LargeTablets*/
 @media (min-width: 768px) and (max-width: 991.99px){
+    #nav{
+        padding: 7px 0px;
+    }
+    #lista a{
+        padding: 22px !important;
+    }
+    #pesquisao{
+        display: none !important;
+    }
     .pesquisa{
         display: none !important;
+    }
+
+    #logao{
+        width: 50% !important;
     }
 
     #logo{
@@ -37,9 +58,38 @@
 }
 
 /*Tablet*/
-@media (min-width: 340px) and (max-width: 767.98px){
+@media (min-width: 340px) and (max-width: 767.99px){
     .pesquisa{
         display: none !important;
+    }
+    #pesquisao{
+        display: none !important;
+    }
+    #nav{
+        padding: 7px 0px;
+    }
+    #icones i{
+        font-size: 70%;
+    }
+    #logo{
+        font-size: 70%;
+        width: 100px !important;
+    }
+    #logao{
+        width: 50% !important;
+    }
+
+    #lista{
+        padding: 7px 0px !important;
+    }
+
+    #navbarzao{
+        height: 70px !important;
+    }
+
+    #lista a{
+        padding: 0px 17px !important;
+        font-size: 71% !important;
     }
 
     #logo{
@@ -59,14 +109,24 @@
 }
 
 /*Celular*/
-@media (max-width: 339.98px){
+@media (max-width: 339.99px){
+    #navbarzao{
+        height: 56px !important;
+    }
+
     .pesquisa{
+        display: none !important;
+    }
+    #pesquisao{
         display: none !important;
     }
 
     #logo{
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #logao{
+        width: 50% !important;
     }
 
     #category{
@@ -75,12 +135,97 @@
 
     #icones{     
         margin-left: auto;
+        font-size: 117% !important;
     }
     #Logo{
         margin-left: auto;
     }
 }
 
+/*nova navbar*/
+#navbarzao{
+    width: auto;
+    height: 120px;
+    background-color: rgb(168, 39, 219);
+    display: flex;
+    padding: 0px 9%;
+}
+
+#menucel{
+    width: 25%;
+    font-size: 180%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*logo*/
+#logao{
+    width: 25%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#logo{
+    width: 68%;
+    display: flex;
+}
+
+/*barra de pesquisa*/
+#pesquisao{
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pesquisa{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11px;
+}
+
+#pesquisar{
+    width: 83%;
+    border-bottom-left-radius: 28px;
+    border-top-left-radius: 28px;
+    border-style: none;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    font-size: 19px;
+    padding: 11px;
+}
+
+.pesquisas{
+    display: flex;
+    width: 100%;
+}
+
+
+/*mudar icone*/
+#iconesao{
+    width: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#icones{
+    float: right;
+    font-size: 200%;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#icones i{
+    margin-right: 14%;
+}
 
 /*div com as ul`s*/
 #list{
@@ -110,69 +255,19 @@
 #lista{
     display: flex;
     list-style: none;
-    padding: 18px;
+    padding: 3%;
 }
 
 #lista a{
     text-decoration: none;
     color: rgb(168, 39, 219);
     padding: 18px;
-    font-size: 18px;
+    font-size: 81%;
 }
 
 #lista a:hover{
     background-color: rgb(236, 187, 241);
     transition: all 0.3s ease 0s;
-}
-/*classe do input pesquisa*/
-.pesquisa{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-left: 3%;
-    width: 580px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 11px;
-}
-
-/*mexer só no input*/
-.pesquisas{
-    display: flex;
-    width: 100%;
-}
-/*icones da direita*/
-#icones{
-    font-size: 200%;
-    display: flex;
-    width: 12%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-#icones i{
-    margin-left: 18%;
-    
-}
-
-#logo{
-    width: 162px;
-}
-
-
-
-#pesquisar{
-    width: 83%;
-    border-bottom-left-radius: 28px;
-    border-top-left-radius: 28px;
-    border-style: none;
-    background-color: #f1f1f1;
-    padding-left: 20px;
-    font-size: 19px;
-    padding: 11px;
 }
 
 .botão{
