@@ -8,7 +8,9 @@ export default function Navbar(){
     return(<>
     <div className={styles.cabecalho}>
     <i class="fa-solid fa-bars" id={styles.menu}></i>
-      <a href="/" id={styles.Logo}><img src="/images/logo.png" href="/" id={styles.logo}/></a>
+      <Link href="/">
+        <a id={styles.Logo}><img src="/images/logo.png" id={styles.logo}/></a>
+      </Link>
       <div className={styles.pesquisa}>
         <InputGroup className={styles.pesquisas}>
             <Form.Control

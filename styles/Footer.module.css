@@ -44,7 +44,6 @@
     }
 
     #containerF{
-        width: 100% !important;
         display: flex;
         padding: 10% !important;
     }
@@ -200,6 +199,7 @@
 #containerF{
     background-color: #202121;
     padding: 10px 139px;
+    margin-top: -1px;
 }
 #email{
     background-color: #202121;
