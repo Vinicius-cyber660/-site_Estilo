@@ -7,7 +7,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 export default function Navbar(){
     return(<>
     <div className={styles.cabecalho}>
-    <i class="fa-solid fa-bars" id={styles.menu}></i>
+    <i className={"fa-solid fa-bars"} id={styles.menu}></i>
       <Link href="/">
         <a id={styles.Logo}><img src="/images/logo.png" id={styles.logo}/></a>
       </Link>
@@ -20,19 +20,19 @@ export default function Navbar(){
               aria-describedby="basic-addon2"
             />
             <Button variant="outline-secondary" id="button-addon2" className={styles.botão}>
-              <i class="fa-solid fa-magnifying-glass" id={styles.lupa}></i>
+              <i className={"fa-solid fa-magnifying-glass"} id={styles.lupa}></i>
             </Button>
           </InputGroup>
       </div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
       <div id={styles.icones}>
-        <i class="fa-solid fa-circle-user fa-1x"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i className={"fa-solid fa-circle-user fa-1x"}></i>
+        <i className={"fa-solid fa-cart-shopping"}></i>
       </div>     
     </div>
     <div id={styles.nav}>
       <div id={styles.category}>
-        <i class="fa-solid fa-bars"></i>
+        <i className={"fa-solid fa-bars"}></i>
         <Link href="">           
           <a>Categorias</a>
         </Link>

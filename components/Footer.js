@@ -64,16 +64,16 @@ export default function Footer(){
                     <div className={styles.child4}>
                         <h3>Conheça Nossas Redes Sociais</h3>
                         <Link href="https://www.facebook.com/ECcaragua" >
-                            <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank"><i className={"fa-brands fa-facebook-f"}></i></a>
                         </Link>
                         <Link href="https://www.youtube.com/channel/UCPeP3FNqoLvQ5kWAD5gyWsQ" >
-                            <a target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a target="_blank"><i className={"fa-brands fa-youtube"}></i></a>
                         </Link>
                         <Link href="https://pin.it/1p6FnKJ">
-                            <a target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a target="_blank"><i className={"fa-brands fa-pinterest-p"}></i></a>
                         </Link>
                         <Link href="https://www.instagram.com/estilo_criacao/">
-                            <a target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a target="_blank"><i className={"fa-brands fa-instagram"}></i></a>
                         </Link>
                     </div>  
                 </div>
