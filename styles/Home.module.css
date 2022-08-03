@@ -57,15 +57,23 @@
   width: 100%;
 }
 
+.produto img{
+  width: 100%;
+}
+
+.produto h4{
+  text-align: center;
+}
+
 .produto{
   cursor: pointer;
-  margin: 0px 7px;
-  padding: 8px;
 }
 
 .produto:hover{
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 8px;
 }
+
 
 .produto p{
   text-align: center;
