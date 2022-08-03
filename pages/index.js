@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Button } from 'reactstrap'
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 
 export default function Home(){
   return(
@@ -66,24 +66,28 @@ export default function Home(){
           <h4>Caneca Miranha</h4>
           <h3 className={styles.preço}>R$28.00</h3>
           <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+          <Button variant="success" className={styles.comprar}>Comprar</Button>
         </div>
         <div className={styles.produto}>
           <img src="/images/550x550.png"/>
           <h4>Caneca Batma</h4>
           <h3 className={styles.preço}>R$28.00</h3>
           <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+          <Button variant="success" className={styles.comprar}>Comprar</Button>
         </div>
         <div className={styles.produto}>
           <img src="/images/550x550.png"/>
           <h4>Caneca Dr. Esquisito</h4>
           <h3 className={styles.preço}>R$28.00</h3>
           <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+          <Button variant="success" className={styles.comprar}>Comprar</Button>
         </div>
         <div className={styles.produto}>
           <img src="/images/550x550.png"/>
           <h4>Caneca Tór</h4>
           <h3 className={styles.preço}>R$28,00</h3>
           <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+          <Button variant="success" className={styles.comprar}>Comprar</Button>
         </div>
       </div>
     </div>

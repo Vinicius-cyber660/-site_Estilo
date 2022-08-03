@@ -304,8 +304,18 @@
     display: flex;
 }
 
+#category button{
+    border: none;
+}
+
 #category{
     padding: 10px;
+}
+
+#category span{
+    margin-left: 10px;
+    font-size: 22px;
+    color: rgb(99, 16, 132);
 }
 
 #category i{
@@ -316,6 +326,10 @@
 #category a{
     text-decoration: none;
     color: rgb(99, 16, 132);
-    padding: 18px;
-    font-size: 25px;
+    padding: 3px;
+    font-size: 17px;
+}
+
+.dropdown-menu{
+    border: 0px;
 }

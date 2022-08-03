@@ -59,7 +59,12 @@
 
 .produto{
   cursor: pointer;
-  margin: 0px 15px;
+  margin: 0px 7px;
+  padding: 8px;
+}
+
+.produto:hover{
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .produto p{
@@ -80,4 +85,10 @@
   font-size: 140%;
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.comprar{
+  background-color: #51A92B;
+  border-color: #51A92B;
+  width: 100%;
 }

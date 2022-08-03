@@ -4,6 +4,7 @@ import React from 'react'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function Navbar(){
     return(<>
@@ -45,10 +46,15 @@ export default function Navbar(){
     </div>
     <div id={styles.nav}>
       <div id={styles.category}>
-        <i className={"fa-solid fa-bars"}></i>
-        <Link href="">           
-          <a>Categorias</a>
-        </Link>
+        <Dropdown className={styles.drop}>
+          <Dropdown.Toggle variant="white" id="dropdown-basic">
+            <i className={"fa-solid fa-bars"}></i><span>Categorias</span>
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
       <div id={styles.list}>
         <ul id={styles.lista}>
