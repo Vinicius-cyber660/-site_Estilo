@@ -46,3 +46,38 @@
   color: #202121;
 }
 
+#Pmaisvendidos{
+  display: flex;
+  padding: 0px 6%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#Pmaisvendidos img{
+  width: 100%;
+}
+
+.produto{
+  cursor: pointer;
+  margin: 0px 15px;
+}
+
+.produto p{
+  text-align: center;
+  position: relative;
+  top: -5px;
+}
+
+.preço{
+  color: rgb(29, 210, 29);
+  font-size: 130%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.produto h4{
+  padding: 0px 15px;
+  font-size: 140%;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

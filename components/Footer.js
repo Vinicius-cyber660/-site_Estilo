@@ -75,10 +75,21 @@ export default function Footer(){
                         <Link href="https://www.instagram.com/estilo_criacao/">
                             <a target="_blank"><i className={"fa-brands fa-instagram"}></i></a>
                         </Link>
-                    </div>  
-                </div>
-            </div>
+                        
+                        
+                        <div id={styles.facebook}>
+                            <i class="fa-solid fa-caret-up"></i>
+                            <img src="/images/PaginaFB.png"/>
+                        </div> 
 
+                        <div id={styles.instagram}>
+                            <i class="fa-solid fa-caret-up"></i>
+                            <img src="/images/insta.png"/>
+                        </div> 
+
+                    </div>                   
+                </div>               
+            </div>
             <div id={styles.containerF}>
                 <div id={styles.email}>
                     <p>estilocriacao1@gmail.com</p>
