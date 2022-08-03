@@ -78,12 +78,12 @@ export default function Footer(){
                         
                         
                         <div id={styles.facebook}>
-                            <i class="fa-solid fa-caret-up"></i>
+                            <i className="fa-solid fa-caret-up"></i>
                             <img src="/images/PaginaFB.png"/>
                         </div> 
 
                         <div id={styles.instagram}>
-                            <i class="fa-solid fa-caret-up"></i>
+                            <i className="fa-solid fa-caret-up"></i>
                             <img src="/images/insta.png"/>
                         </div> 
 

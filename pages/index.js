@@ -58,37 +58,7 @@ export default function Home(){
       </div>
     </div>
     <h1 id={styles.maisvend}>Mais Vendidos</h1>
-    {/* COMENTÁRIO JSX 
-      <Container>
-      <Row>
-        <Col sm={6} md={4} lg={3} xl={3}>
-          <Image src="/images/550x550.png" width="300" height="300"/>
-        </Col>
-        <Col sm={6} md={4} lg={3} xl={3}>
-          <div className="singleProduct">
-            <div className="productImage">
-              <Image src="/images/550x550.png" width="300" height="300"/>
-              <div className="botão">
-                <Link href="/products/Herois/Miranha">
-                  <a style={{textDecoration: 'none',
-                             color: '#424646',
-                             fontSize: '18px',
-                             position: 'relative',
-                             bottom: '-10px'}}>Caneca Miranha</a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Col>
-        <Col sm={6} md={4} lg={3} xl={3}>
-          <Image src="/images/550x550.png" width="300" height="300"/>
-        </Col>
-        <Col sm={6} md={4} lg={3} xl={3}>
-          <Image src="/images/550x550.png" width="300" height="300"/>
-        </Col>
-      </Row>
-    </Container>
-    */}
+    
     <div className="carousel">
       <div id={styles.Pmaisvendidos}>
         <div className={styles.produto}>
