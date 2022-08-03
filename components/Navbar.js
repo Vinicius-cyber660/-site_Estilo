@@ -53,6 +53,16 @@ export default function Navbar(){
 
           <Dropdown.Menu>
             <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois/Miranha">Miranha</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois/Batma">Batma</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>
