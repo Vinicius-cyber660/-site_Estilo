@@ -1,5 +1,24 @@
 @media (min-width: 992px){
-    
+    .child2 a:hover{
+        color: rgb(168, 81, 168);
+        transition: all 0.4s ease 0s;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .child3 a:hover{
+        color: rgb(168, 81, 168);
+        transition: all 0.4s ease 0s;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .child4 a:hover{
+        color: rgb(168, 81, 168);
+        transition: all 0.4s ease 0s;
+    }
 }
 
 /*LargeTablets*/
@@ -237,12 +256,10 @@
 }
 
 .child2 a:hover{
-    color: rgb(168, 81, 168);
-    transition: all 0.4s ease 0s;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
+    color: white;
 }
+
+
 /*Mais Informações*/
 .child3{
     width: 30%;
@@ -261,12 +278,10 @@
 }
 
 .child3 a:hover{
-    color: rgb(168, 81, 168);
-    transition: all 0.4s ease 0s;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
+    color: white;
 }
+
+
 /*Redes Sociais*/
 .child4{
     width: 70%;
@@ -288,9 +303,10 @@
 }
 
 .child4 a:hover{
-    color: rgb(168, 81, 168);
-    transition: all 0.4s ease 0s;
+    color: white;
 }
+
+
 
 /*embaixo do footer*/
 #containerF{
