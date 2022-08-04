@@ -7,6 +7,29 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
+import Carousel2 from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 2
+  }
+};
+
 
 export default function Home(){
   return(
@@ -40,15 +63,7 @@ export default function Home(){
         />
       </Carousel.Item>
     </Carousel>
-    
 
-
-
-
-
-
-
-    
       <div id={styles.minibanners}>
         <div>
           <img src="/images/teste1.png"/>
@@ -60,52 +75,89 @@ export default function Home(){
     </div>
     <h1 id={styles.maisvend}>Mais Vendidos</h1>
     
-    
-    <div>
-      <div id={styles.Pmaisvendidos}>
-        <Container>
-          <Row>
-            <Col xl={3} sm={6} md={4} xs={6}>
-              <div className={styles.produto}>
-                <img src="/images/550x550.png"/>
-                <h4>Caneca Miranha</h4>
-                <h3 className={styles.preço}>R$28,00</h3>
-                <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-                <Button variant="success" className={styles.comprar}>Comprar</Button>
-              </div>
-            </Col>                
-            <Col xl={3} sm={6} md={4} xs={6}>
-              <div className={styles.produto}>  
-                <img src="/images/550x550.png"/>
-                <h4>Caneca Dr. Esquisito</h4>
-                <h3 className={styles.preço}>R$28,00</h3>
-                <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-                <Button variant="success" className={styles.comprar}>Comprar</Button>
-              </div>
-            </Col>
-            <Col xl={3} sm={6} md={4} xs={6}>
-              <div className={styles.produto}>
-                <img src="/images/550x550.png"/>
-                <h4>Caneca Batma</h4>
-                <h3 className={styles.preço}>R$28,00</h3>
-                <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-                <Button variant="success" className={styles.comprar}>Comprar</Button>
-              </div>
-            </Col>
-            <Col xl={3} sm={6} md={4} xs={6}>
-              <div className={styles.produto}>
-                <img src="/images/550x550.png"/>
-                <h4>Caneca Tór</h4>
-                <h3 className={styles.preço}>R$28,00</h3>
-                <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-                <Button variant="success" className={styles.comprar}>Comprar</Button>
-              </div>
-            </Col>
-          </Row>              
-        </Container>
-      </div>
-    </div>
-    
+    <Carousel2 responsive={responsive}>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+              <img src="/images/550x550.png"/>
+              <h4>Caneca Miranha</h4>
+              <h3 className={styles.preço}>R$28,00</h3>
+              <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+              <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+              <img src="/images/550x550.png"/>
+              <h4>Caneca Miranha</h4>
+              <h3 className={styles.preço}>R$28,00</h3>
+              <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+              <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+        <div id={styles.Pmaisvendidos}>
+          <div className={styles.produto}>
+            <img src="/images/550x550.png"/>
+            <h4>Caneca Miranha</h4>
+            <h3 className={styles.preço}>R$28,00</h3>
+            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+            <Button variant="success" className={styles.comprar}>Comprar</Button>
+          </div>
+        </div>
+    </Carousel2>
     
     </>
   )

@@ -1,8 +1,28 @@
 import styles from '../styles/Footer.module.css'
 import Link from 'next/link'
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 export default function Footer(){
     return (<>
+        <div className={styles.prefooter}>
+            <div className={styles.email}>
+                <h4>Cadastre-se e fique por dentro das Promoções</h4>
+                <p>Não perca nenhuma de nossas promoções e ofertas exclusivas por email!</p>
+                <InputGroup className="mb-3" id={styles.cadastro}>
+                    <Form.Control
+                    id={styles.control}
+                    placeholder="Digite seu Email"
+                    aria-label="Digite seu Email"
+                    aria-describedby="basic-addon2"
+                    />
+                    <InputGroup.Text id="basic-addon2" className={styles.botao}>@example.com</InputGroup.Text>
+                </InputGroup>
+            </div>
+        </div>
+
+
+
         <div>
             <div className={styles.footer}>
                 <div id={styles.cria1}>
