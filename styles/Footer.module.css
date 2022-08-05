@@ -162,6 +162,10 @@
     }
 }
 
+#promocoes{
+
+}
+
 .prefooter{
     background-color: rgb(168, 39, 219);
     height: 150px;
@@ -169,10 +173,12 @@
 }
 
 .email h4{
+    width: 100%;
     font-size: 120%;
 }
 
 .email p{
+    width: 100%;
     font-size: 90%;
 }
 

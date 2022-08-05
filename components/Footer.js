@@ -7,8 +7,10 @@ export default function Footer(){
     return (<>
         <div className={styles.prefooter}>
             <div className={styles.email}>
-                <h4>Cadastre-se e fique por dentro das Promoções</h4>
-                <p>Não perca nenhuma de nossas promoções e ofertas exclusivas por email!</p>
+                <div id={styles.promocoes}>
+                    <h4>Cadastre-se e fique por dentro das Promoções</h4>
+                    <p>Não perca nenhuma de nossas promoções e ofertas exclusivas por email!</p>
+                </div>
                 <InputGroup className="mb-3" id={styles.cadastro}>
                     <Form.Control
                     id={styles.control}
@@ -16,7 +18,7 @@ export default function Footer(){
                     aria-label="Digite seu Email"
                     aria-describedby="basic-addon2"
                     />
-                    <InputGroup.Text id="basic-addon2" className={styles.botao}>@example.com</InputGroup.Text>
+                    <InputGroup.Text id="basic-addon2" className={styles.botao}><i class="fa-solid fa-v fa-rotate-270"></i></InputGroup.Text>
                 </InputGroup>
             </div>
         </div>

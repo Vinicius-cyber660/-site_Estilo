@@ -5,13 +5,34 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
+import React2, { useState } from 'react';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 export default function Navbar(){
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     return(<>
     <div id={styles.navbarzao}>
       <div id={styles.menucel}>
-        <i className={"fa-solid fa-bars"}></i>
+        <Button variant="transparent" onClick={handleShow}>
+          <i className={"fa-solid fa-bars"}></i>
+        </Button>
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            Vai ter mais coisa muahahaha
+          </Offcanvas.Body>
+        </Offcanvas>
       </div>
+
+
+
 
       <div id={styles.logao}>
         <div id={styles.logo10}>

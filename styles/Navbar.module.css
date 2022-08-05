@@ -171,6 +171,10 @@
     margin-bottom: auto;
 }
 
+#menucel button{
+    border-style: none;
+}
+
 /*logo*/
 #logao{
     width: 25%;
