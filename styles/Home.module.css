@@ -34,7 +34,8 @@
   #minibanners img{
     margin: 5px 8px;
     border-radius: 15px;
-    width: 98%;
+    display: flex;
+    width: 97%;
   }
 }
 
@@ -47,7 +48,7 @@
   #minibanners img{
     margin: 5px 8px;
     border-radius: 15px;
-    width: 98%;
+    width: 93%;
   }
 }
 
