@@ -48,19 +48,19 @@
   width: 98%;
 }
 
-#maisvend{
+.maisvend{
   text-align: center;
   color: #202121;
 }
 
-#Pmaisvendidos{
+.Pmaisvendidos{
   display: flex;
   padding: 0px 6%;
   margin-top: 2%;
   margin-bottom: 2%;
 }
 
-#Pmaisvendidos img{
+.Pmaisvendidos img{
   width: 100%;
 }
 
@@ -104,3 +104,13 @@
   border-color: #51A92B;
   width: 100%;
 }
+
+.arrow{
+  min-width: 20%;
+}
+
+.CarrosselP{
+  margin: 30px 8%;
+}
+
+
