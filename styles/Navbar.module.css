@@ -127,6 +127,10 @@
         display: none !important;
     }
 
+    #logo{
+        width: 90px !important;
+    }
+
     .pesquisa{
         display: none !important;
     }
