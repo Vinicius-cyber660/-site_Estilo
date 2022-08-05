@@ -20,10 +20,26 @@
     #lista{
         padding: 0% !important;
     }
+
+    #icones i{
+        margin-right: 5% !important; 
+    }
+
+    #iconesao {
+        width: 28% !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+
+    #pesquisao {
+        width: 54% !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
 }
 
 /*LargeTablets*/
-@media (min-width: 768px) and (max-width: 991.99px){
+@media (min-width: 768px) and (max-width: 991.98px){
     #nav{
         padding: 7px 0px;
         display: none !important;
@@ -62,6 +78,13 @@
     }
     #Logo{
         margin-left: auto;
+    }
+    #entrar{
+        display: none;
+    }
+
+    #icones i{
+        font-size: 100%;
     }
 }
 
@@ -115,6 +138,12 @@
     #Logo{
         margin-left: auto;
     }
+    #entrar{
+        display: none;
+    }
+    #icones i{
+        font-size: 80%;
+    }
 }
 
 /*Celular*/
@@ -157,8 +186,34 @@
     #Logo{
         margin-left: auto;
     }
+    #entrar{
+        display: none;
+    }
+
+    #icones i{
+        font-size: 110%;
+    }
 }
 
+@media (max-width: 1176px){
+    #entrar{
+        display: none;
+    }
+    #iconesao {
+        width: 19% !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+
+    #pesquisao {
+        width: 63% !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+    #icones i{
+        margin-right: 16% !important; 
+    }
+}
 /*nova navbar*/
 #navbarzao{
     width: auto;
@@ -181,11 +236,12 @@
 
 #menucel i{
     font-size: 200%;
+    color: white;
 }
 
 /*logo*/
 #logao{
-    width: 25%;
+    width: 18%;
     display: block;
     margin-top: auto;
     margin-bottom: auto;
@@ -200,7 +256,7 @@
 
 /*barra de pesquisa*/
 #pesquisao{
-    width: 50%;
+    width: 65%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -225,7 +281,7 @@
     border-style: none;
     background-color: #f1f1f1;
     padding-left: 20px;
-    font-size: 19px;
+    font-size: 17px;
     padding: 11px;
 }
 
@@ -237,7 +293,7 @@
 
 /*mudar icone*/
 #iconesao{
-    width: 25%;
+    width: 17%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -251,7 +307,22 @@
 }
 
 #icones i{
-    margin-right: 14%;
+    margin-right: 18%;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#icones p{
+    color: white;
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: auto;
+    line-height: 18px;
+}
+
+#entrar{
+    width: 184px;
 }
 
 /*div com as ul`s*/

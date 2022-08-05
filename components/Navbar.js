@@ -23,10 +23,36 @@ export default function Navbar(){
         </Button>
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title>Categorias</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Vai ter mais coisa muahahaha
+            <ul>
+              <li>
+              <Link href="/">
+                  <a>Home</a>
+              </Link>
+              </li>
+              <li>
+                <Link href="/products">
+                  <a>Produtos</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <a>Sobre</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/colection">
+                  <a>Coleções</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/todos">
+                  <a>Todo</a>
+                </Link>
+              </li>
+            </ul>
           </Offcanvas.Body>
         </Offcanvas>
       </div>
@@ -60,7 +86,10 @@ export default function Navbar(){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
       <div id={styles.iconesao}>
         <div id={styles.icones}>
-          <i className={"fa-solid fa-circle-user fa-1x"}></i>
+          <i class={"fa-regular fa-circle-user fa-1x"}></i>
+          <div id={styles.entrar}>
+            <p>Bem-vindo(a) <br/> <strong>Entrar</strong> ou <strong>Cadastrar</strong></p>
+          </div>
           <i className={"fa-solid fa-cart-shopping"}></i>
         </div> 
       </div>
