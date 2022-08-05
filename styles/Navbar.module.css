@@ -349,6 +349,19 @@
     
 }
 
+/*mexer nas ul`s pra celular*/
+#listacel{
+    list-style: none;
+    padding: 3%;
+}
+#listacel a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(168, 39, 219);
+    padding: 15px;
+    font-size: 131%;
+}
 /*mexer nas ul`s*/
 #lista{
     display: flex;
@@ -417,4 +430,10 @@
 
 .dropdown-menu{
     border: 0px;
+}
+
+#men{
+    text-align: center;
+    width: 100%;
+    color: purple;
 }

@@ -23,23 +23,18 @@ export default function Navbar(){
         </Button>
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Categorias</Offcanvas.Title>
+            <Offcanvas.Title id={styles.men}>Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <ul>
+            <ul id={styles.listacel} onClick={handleClose}>
               <li>
-              <Link href="/">
-                  <a>Home</a>
-              </Link>
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
               </li>
               <li>
                 <Link href="/products">
                   <a>Produtos</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <a>Sobre</a>
                 </Link>
               </li>
               <li>
@@ -48,8 +43,13 @@ export default function Navbar(){
                 </Link>
               </li>
               <li>
+                <Link href="/about">
+                  <a>Sobre</a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/todos">
-                  <a>Todo</a>
+                  <a>Instagram</a>
                 </Link>
               </li>
             </ul>
