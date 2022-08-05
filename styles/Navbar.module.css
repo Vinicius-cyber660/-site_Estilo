@@ -175,6 +175,10 @@
     border-style: none;
 }
 
+#menucel i{
+    font-size: 200%;
+}
+
 /*logo*/
 #logao{
     width: 25%;
@@ -184,7 +188,7 @@
 }
 
 #logo{
-    width: 68%;
+    width: 10vw;
     display: flex;
 }
 
