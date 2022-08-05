@@ -86,7 +86,7 @@ export default function Navbar(){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
       <div id={styles.iconesao}>
         <div id={styles.icones}>
-          <i class={"fa-regular fa-circle-user fa-1x"}></i>
+          <i className={"fa-regular fa-circle-user fa-1x"}></i>
           <div id={styles.entrar}>
             <p>Bem-vindo(a) <br/> <strong>Entrar</strong> ou <strong>Cadastrar</strong></p>
           </div>
