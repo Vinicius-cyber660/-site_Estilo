@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ProductsCarousel from '../components/productCarousel';
+import ProductsCarousel from '../components/ProductCarousel';
 
 export default function Home(){
   return(
