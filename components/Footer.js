@@ -2,8 +2,25 @@ import styles from '../styles/Footer.module.css'
 import Link from 'next/link'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import { useState } from 'react';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer(){
+    const [showInstagram, setShowInstagram] = useState(false);
+
+    const instagramHandle = () => {
+        setShowInstagram(!showInstagram);
+    }
+
+    const [showFacebook, setShowFacebook] = useState(false);
+
+    const facebookHandle = () => {
+        setShowFacebook(!showFacebook);
+    }
+
     return (<>
         <div className={styles.prefooter}>
             <div className={styles.email}>
@@ -85,8 +102,8 @@ export default function Footer(){
                     </div>
                     <div className={styles.child4}>
                         <h3>Conheça Nossas Redes Sociais</h3>
-                        <Link href="https://www.facebook.com/ECcaragua" >
-                            <a target="_blank"><i className={"fa-brands fa-facebook-f"}></i></a>
+                        <Link href="https://www.facebook.com/ECcaragua">
+                            <a target="_blank" onMouseEnter={facebookHandle} onMouseLeave={facebookHandle}><i className={"fa-brands fa-facebook-f"}></i></a>
                         </Link>
                         <Link href="https://www.youtube.com/channel/UCPeP3FNqoLvQ5kWAD5gyWsQ" >
                             <a target="_blank"><i className={"fa-brands fa-youtube"}></i></a>
@@ -95,20 +112,24 @@ export default function Footer(){
                             <a target="_blank"><i className={"fa-brands fa-pinterest-p"}></i></a>
                         </Link>
                         <Link href="https://www.instagram.com/estilo_criacao/">
-                            <a target="_blank"><i className={"fa-brands fa-instagram"}></i></a>
+                            <a target="_blank" onMouseEnter={instagramHandle} onMouseLeave={instagramHandle}><i className={"fa-brands fa-instagram"}></i></a>
                         </Link>
                         
-                        
-                        <div id={styles.facebook}>
+                        <div id={styles.facebook} className={showFacebook ? '': styles.hidden}>
+                            {console.log(showFacebook ? '': 'hidden')}
                             <i className="fa-solid fa-caret-up"></i>
                             <img src="/images/PaginaFB.png"/>
-                        </div> 
+                        </div>
 
-                        <div id={styles.instagram}>
+                       
+
+                        <div id={styles.instagram} className={showInstagram ? '': styles.hidden}>
+                            {console.log(showInstagram ? '': 'hidden')}
                             <i className="fa-solid fa-caret-up"></i>
                             <img src="/images/insta.png"/>
                         </div> 
 
+                        
                     </div>                   
                 </div>               
             </div>

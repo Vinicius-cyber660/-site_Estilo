@@ -239,6 +239,19 @@
     color: white;
 }
 
+#categ{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(168, 39, 219);
+    padding: 15px;
+    font-size: 131%;
+}
+
+#categ p{
+    margin-bottom: 0px;
+}
+
 /*logo*/
 #logao{
     width: 18%;
@@ -428,8 +441,17 @@
     font-size: 17px;
 }
 
+.colunas{
+    
+}
+
 .dropdown-menu{
     border: 0px;
+}
+.drop{
+    position: relative;
+    top: -1px;
+    width: 150%;
 }
 
 #men{

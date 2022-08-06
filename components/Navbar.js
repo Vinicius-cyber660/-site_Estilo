@@ -7,12 +7,21 @@ import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import React2, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function Navbar(){
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    /*esconder categorias*/ 
+    const [showCategory, setShowCategory] = useState(false);
+
+    const categoryHandle = () => {
+        setShowCategory(!showCategory);
+    }
 
 
     return(<>
@@ -26,7 +35,30 @@ export default function Navbar(){
             <Offcanvas.Title id={styles.men}>Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
+            <li id={styles.categ}>
+              <p>Categorias</p>
+              <ul>
+                <li>
+                  olá
+                </li>
+                <li>
+                  olá
+                </li>
+                <li>
+                  olá
+                </li>
+                <li>
+                  olá
+                </li>
+                <li>
+                  olá
+                </li>
+              </ul>
+            </li>
             <ul id={styles.listacel} onClick={handleClose}>
+              
+
+
               <li>
                 <Link href="/">
                     <a>Home</a>
@@ -101,18 +133,24 @@ export default function Navbar(){
             <i className={"fa-solid fa-bars"}></i><span>Categorias</span>
           </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois/Miranha">Miranha</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois/Batma">Batma</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+          <Dropdown.Menu className={styles.drop}>
+            <Row>
+              <Col className={styles.colunas}>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois/Miranha">Miranha</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois/Batma">Batma</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+              </Col>
+              <Col className={styles.colunas}>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+                <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
+              </Col>
+            </Row>
           </Dropdown.Menu>
         </Dropdown>
       </div>
