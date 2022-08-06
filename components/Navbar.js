@@ -165,7 +165,7 @@ export default function Navbar(){
             <i className={"fa-solid fa-bars"}></i><span>Categorias</span>
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className={styles.drop}>
+          <Dropdown.Menu id={styles.drop2}>
             <Row>
               <Col className={styles.colunas}>
                 <Dropdown.Item href="/products/Herois">Herois</Dropdown.Item>
