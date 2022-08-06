@@ -8,6 +8,10 @@
         margin-left: 5%;
     }
 
+    #category:hover{
+        background-color: rgb(236, 187, 241);
+    }
+
     #nav{     
         margin-right: 16%;
         height: 57px;
@@ -25,6 +29,15 @@
         margin-right: 5% !important; 
     }
 
+    #icones i:hover{
+        color: rgb(205, 201, 201);
+    }
+
+    #icones a:hover{
+        text-decoration: none;
+        color: rgb(205, 201, 201);
+    }
+
     #iconesao {
         width: 28% !important;
         margin-top: auto !important;
@@ -36,6 +49,10 @@
         margin-top: auto !important;
         margin-bottom: auto !important;
     }
+    #icones i{
+        cursor: pointer;
+    }
+    
 }
 
 /*LargeTablets*/
@@ -223,6 +240,14 @@
     padding: 0px 9%;
 }
 
+#category{
+    color: rgb(99, 16, 132)
+}
+
+#bodymenu{
+    background-color: rgb(242, 242, 242);
+}
+
 #menucel{
     width: 25%;
     font-size: 180%;
@@ -319,6 +344,11 @@
     margin-bottom: auto;
 }
 
+#icones a{
+    text-decoration: none;
+    color: white;
+}
+
 #icones i{
     margin-right: 18%;
     color: white;
@@ -365,6 +395,7 @@
 /*mexer nas ul`s que somem pra celular*/
 #categ p{
     padding: 1%;
+    display: flex;
 }
 
 #categ li{
@@ -382,9 +413,10 @@
     padding: 6px 12px;
 }
 
-#men{
+.men{
     text-align: center;
     width: 100%;
+    background-color: rgb(242, 242, 242);
     color: purple;
 }
 
@@ -397,6 +429,18 @@
 }
 
 /*listas que não somem*/
+#seta1{
+    display: flex;
+    transition: all 0.4s ease 0s;
+    margin-left: 20px;
+}
+
+
+#seta1 i{
+    margin-top: 5px;
+}
+
+
 #listacel{
     list-style: none;
     padding: 0%;
@@ -483,4 +527,13 @@
     top: -1px;
     width: 150%;
 }
+
+#facebook{
+    margin-top: 17px;
+    width: 100%;
+    height: 68%;
+    transition: all 0.4s ease 0s;
+    opacity: 100%;
+}
+
 

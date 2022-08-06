@@ -35,7 +35,7 @@ export default function Footer(){
                     aria-label="Digite seu Email"
                     aria-describedby="basic-addon2"
                     />
-                    <InputGroup.Text id="basic-addon2" className={styles.botao}><i className={"fa-solid fa-v fa-rotate-270"}></i></InputGroup.Text>
+                    <InputGroup.Text id="basic-addon2" className={styles.botao}><i className={"fa-solid fa-chevron-right"}></i></InputGroup.Text>
                 </InputGroup>
             </div>
         </div>

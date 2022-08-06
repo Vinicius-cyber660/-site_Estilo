@@ -23,7 +23,6 @@ export default function Navbar(){
         setShowCategory(!showCategory);
     }
 
-
     return(<>
     
     <div id={styles.navbarzao}>
@@ -32,12 +31,15 @@ export default function Navbar(){
           <i className={"fa-solid fa-bars"}></i>
         </Button>
         <Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={styles.men}>Menu</Offcanvas.Title>
+          <Offcanvas.Header closeButton className={styles.men}> 
+            <Offcanvas.Title className={styles.men}>Menu</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body id={styles.bodymenu}>
             <li id={styles.categ}>
-              <p onClick={categoryHandle}>Categorias</p>
+              <p onClick={categoryHandle}>Categorias 
+              <div id={styles.seta1}><i class="fa-solid fa-caret-down"></i></div>
+              </p>
+
               <div id={styles.menCateg} className={showCategory ? '': styles.hidden}>
               {console.log(showCategory ? '': 'hidden')}
                 <ul onClick={handleClose}>
@@ -144,11 +146,15 @@ export default function Navbar(){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
       <div id={styles.iconesao}>
         <div id={styles.icones}>
-          <i className={"fa-regular fa-circle-user fa-1x"}></i>
+          <Link href="/login">
+            <i className={"fa-regular fa-circle-user fa-1x"}></i>
+          </Link>
           <div id={styles.entrar}>
-            <p>Bem-vindo(a) <br/> <strong>Entrar</strong> ou <strong>Cadastrar</strong></p>
+            <p>Bem-vindo(a) <br/> <strong><Link href="/login">Entrar</Link></strong> ou <strong><Link href="/login">Cadastrar</Link></strong></p>
           </div>
-          <i className={"fa-solid fa-cart-shopping"}></i>
+          <Link href="/carrinho">
+            <i className={"fa-solid fa-cart-shopping"}></i>
+          </Link>
         </div> 
       </div>
     </div>
