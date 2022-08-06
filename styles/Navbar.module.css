@@ -362,10 +362,44 @@
     
 }
 
-/*mexer nas ul`s pra celular*/
+/*mexer nas ul`s que somem pra celular*/
+#categ p{
+    padding: 1%;
+}
+
+#categ li{
+    list-style: none;
+    margin-left: -20px;
+    padding: 5px 0px;
+}
+
+#categ a{
+    text-decoration: none;
+    color: rgb(168, 39, 219);
+}
+
+#categ{
+    padding: 6px 12px;
+}
+
+#men{
+    text-align: center;
+    width: 100%;
+    color: purple;
+}
+
+#menCateg{
+    width: 100%;
+}
+
+#menCateg.hidden{
+    display: none;
+}
+
+/*listas que não somem*/
 #listacel{
     list-style: none;
-    padding: 3%;
+    padding: 0%;
 }
 #listacel a{
     display: flex;
@@ -450,8 +484,3 @@
     width: 150%;
 }
 
-#men{
-    text-align: center;
-    width: 100%;
-    color: purple;
-}

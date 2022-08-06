@@ -6,6 +6,6 @@ export default function Categoria(){
 
     return <>
     <h1>Categorias de {categoria}</h1>
-    <h3>hello world</h3>
+    <h3>Aproveite</h3>
     </>
 }

@@ -25,6 +25,7 @@ export default function Navbar(){
 
 
     return(<>
+    
     <div id={styles.navbarzao}>
       <div id={styles.menucel}>
         <Button variant="transparent" onClick={handleShow}>
@@ -36,29 +37,54 @@ export default function Navbar(){
           </Offcanvas.Header>
           <Offcanvas.Body>
             <li id={styles.categ}>
-              <p>Categorias</p>
-              <ul>
-                <li>
-                  olá
-                </li>
-                <li>
-                  olá
-                </li>
-                <li>
-                  olá
-                </li>
-                <li>
-                  olá
-                </li>
-                <li>
-                  olá
-                </li>
-              </ul>
+              <p onClick={categoryHandle}>Categorias</p>
+              <div id={styles.menCateg} className={showCategory ? '': styles.hidden}>
+              {console.log(showCategory ? '': 'hidden')}
+                <ul onClick={handleClose}>
+                  <li>
+                    <Link href="/products/Marvel">
+                     <a>Marvel</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/DC Comics">
+                     <a>DC Comics</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Dia dos Pais">
+                     <a>Dia dos Pais</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Dia dos Namorados">
+                     <a>Dia dos Namorados</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Power Rangers">
+                     <a>Power Rangers</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Dia das Mães">
+                     <a>Dia das Mães</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Com Foto">
+                     <a>Com Foto</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Música">
+                     <a>Música</a>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </li>
             <ul id={styles.listacel} onClick={handleClose}>
-              
-
-
               <li>
                 <Link href="/">
                     <a>Home</a>

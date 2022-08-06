@@ -7,7 +7,7 @@ export default function Produto(){
 
     return <>
     <h1>{produto}</h1>
-    <h3>hello world</h3>
+    <h2>aproveite</h2>
     <h5>{categoria}</h5>
     </>
 }
