@@ -37,7 +37,7 @@ export default function Navbar(){
           <Offcanvas.Body id={styles.bodymenu}>
             <li id={styles.categ}>
               <p onClick={categoryHandle}>Categorias 
-              <div id={styles.seta1}><i class="fa-solid fa-caret-down"></i></div>
+              <div id={styles.seta1}><i className={"fa-solid fa-caret-down"}></i></div>
               </p>
 
               <div id={styles.menCateg} className={showCategory ? '': styles.hidden}>
