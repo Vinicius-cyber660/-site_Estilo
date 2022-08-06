@@ -67,9 +67,9 @@
   justify-content: center;
 }
 
-.maisvend{
+.titulo{
   text-align: center;
-  color: #202121;
+  color: rgb(168, 39, 219);
 }
 
 .Pmaisvendidos{
@@ -131,6 +131,7 @@
 .CarrosselP{
   margin: 30px 8%;
 }
+
 
 
 

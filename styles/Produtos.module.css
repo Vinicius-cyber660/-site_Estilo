@@ -1,0 +1,55 @@
+@media (min-width: 992px){
+    .produto:hover{
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+      padding: 8px;
+    }
+}
+
+#corpo{
+    padding: 10px 10%;
+  }
+
+.titulo{
+    text-align: center;
+    color: rgb(168, 39, 219);
+}
+  
+.Pmaisvendidos{
+    display: flex;
+    padding: 0px;
+    margin: 25px 0px;
+}
+
+.Pmaisvendidos img{
+    width: 100%;
+}
+
+.produto img{
+    width: 100%;
+}
+
+.produto h4{
+    text-align: center;
+}
+
+.produto{
+    cursor: pointer;
+}
+
+.preço{
+    color: rgb(29, 210, 29);
+    font-size: 130%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.comprar{
+    background-color: #51A92B;
+    border-color: #51A92B;
+    width: 100%;
+}
+
+.paginas{
+    display: flex;
+    justify-content: center;
+}

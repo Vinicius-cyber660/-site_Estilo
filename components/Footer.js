@@ -116,7 +116,7 @@ export default function Footer(){
                         </Link>
                         
                         <div id={styles.facebook} className={showFacebook ? '': styles.hidden}>
-                            {console.log(showFacebook ? '': 'hidden')}
+                            {showFacebook ? '': 'hidden'}
                             <i className="fa-solid fa-caret-up"></i>
                             <img src='/images/PaginaFB.png'/>
                         </div>
@@ -124,7 +124,7 @@ export default function Footer(){
                        
 
                         <div id={styles.instagram} className={showInstagram ? '': styles.hidden}>
-                            {console.log(showInstagram ? '': 'hidden')}
+                            {showInstagram ? '': 'hidden'}
                             <i className="fa-solid fa-caret-up"></i>
                             <img src='/images/insta.png'/>
                         </div> 

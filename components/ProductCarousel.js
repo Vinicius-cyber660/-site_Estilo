@@ -28,7 +28,7 @@ import styles from '../styles/Home.module.css'
 
     return(
     <>
-    <h1 className={styles.maisvend}>Mais Vendidos</h1>
+    <h1 className={styles.titulo}>Mais Vendidos</h1>
     
 
     <div className={styles.CarrosselP}>
@@ -42,6 +42,8 @@ import styles from '../styles/Home.module.css'
               <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+
+        
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>

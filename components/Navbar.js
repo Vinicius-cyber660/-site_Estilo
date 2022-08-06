@@ -41,7 +41,7 @@ export default function Navbar(){
               </p>
 
               <div id={styles.menCateg} className={showCategory ? '': styles.hidden}>
-              {console.log(showCategory ? '': 'hidden')}
+              {showCategory ? '': 'hidden'}
                 <ul onClick={handleClose}>
                   <li>
                     <Link href="/products/Marvel">
@@ -108,7 +108,7 @@ export default function Navbar(){
                 </Link>
               </li>
               <li>
-                <Link href="/todos">
+                <Link href="/https://www.instagram.com/estilo_criacao/">
                   <a>Instagram</a>
                 </Link>
               </li>
@@ -199,18 +199,13 @@ export default function Navbar(){
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a>Sobre</a>
-            </Link>
-          </li>
-          <li>
             <Link href="/colection">
               <a>Coleções</a>
             </Link>
           </li>
           <li>
-            <Link href="/todos">
-              <a>Todo</a>
+            <Link href="/about">
+              <a>Sobre</a>
             </Link>
           </li>
         </ul>
