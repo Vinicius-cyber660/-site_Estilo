@@ -42,8 +42,6 @@ import styles from '../styles/Home.module.css'
               <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
-
-        
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>

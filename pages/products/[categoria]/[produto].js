@@ -7,7 +7,13 @@ export default function Produto(){
 
     return <>
     <h1>{produto}</h1>
-    <h2>aproveite</h2>
-    <h5>{categoria}</h5>
+    <div>
+        <div className='FtProduto'>
+            <img src="/images/550x550.png"/>
+        </div>
+        <div>
+
+        </div>
+    </div>
     </>
 }
