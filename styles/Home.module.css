@@ -132,6 +132,10 @@
   margin: 30px 8%;
 }
 
+.CarrosselP div {
+  position: inherit;
+}
+
 
 
 
