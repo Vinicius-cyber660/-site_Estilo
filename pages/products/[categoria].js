@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
-
+import { Row, Col } from 'react-bootstrap';
+import ProductsSingle from '../../components/ProductsSingle'
 
 /* cria todas as rotas possíveis */
 export async function getStaticPaths() {
@@ -26,21 +27,29 @@ export async function getStaticProps({params}) {
     /* para cada página, mande (retorne) para página Categoria um item de categorias
     cujo nome seja igual ao parametro passado pela getStaticPaths */
     const item = categorias.find(_categoria => _categoria.nome === params.categoria);
-    return { props: { item } }
+
+    const p_res = await fetch(`http://localhost:4000/produtos`);
+    const produtos = await p_res.json();
+    const products = produtos.filter(_produto => _produto.categoria === item.id);
+    return { props: { item, products } }
 }  
 
 
 /* recebe o { item } retornado por getStaticProps */
-export default function Categoria(  {item}  ){
+export default function Categoria(  {item, products}  ){
     const router = useRouter()
-    const { categoria } = router.query
-    console.log(item)
 
     return <>
-    <h1>Categorias de { categoria }</h1>
+    <h1>Categorias de { item.nome }</h1>
     <h3>Aproveite</h3>
     <br></br>
-    {/* usando o item na página */}
-    <h3>{item.nome}</h3>
+    
+    <Row>
+        {
+            products.map((_produto, i) => (
+                <ProductsSingle product={_produto} categoria={item.nome}/>
+            ))
+        }
+    </Row>
     </>
 }
