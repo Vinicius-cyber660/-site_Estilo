@@ -22,49 +22,57 @@
             "id": 1,
             "nome": "Homem de Ferro",
             "preco": "R$ 100,00",
-            "categoria": 1
+            "categoria": 1,
+            "imagem": "/images/logo.png"
         },
         {
             "id": 2,
             "nome": "Homem Aranha",
             "preco": "R$ 120,00",
-            "categoria": 1
+            "categoria": 1,
+            "imagem": ""
         },
         {
             "id": 3,
             "nome": "Dean Winchester",
             "preco": "R$ 80,00",
-            "categoria": 2
+            "categoria": 2,
+            "imagem": ""
         },
         {
             "id": 4,
             "nome": "Flash",
             "preco": "R$ 90,00",
-            "categoria": 2
+            "categoria": 2,
+            "imagem": ""
         },
         {
             "id": 5,
             "nome": "Viuva Negra",
             "preco": "R$ 70,00",
-            "categoria": 4
+            "categoria": 4,
+            "imagem": ""
         },
         {
             "id": 6,
             "nome": "Saitama",
             "preco": "R$ 80,00",
-            "categoria": 3
+            "categoria": 3,
+            "imagem": ""
         },
         {
             "id": 7,
             "nome": "Os Incríveis",
             "preco": "R$ 90,00",
-            "categoria": 4
+            "categoria": 4,
+            "imagem": ""
         },
         {
             "id": 8,
             "nome": "Os Incríveis 2",
             "preco": "R$ 100,00",
-            "categoria": 4
+            "categoria": 4,
+            "imagem": ""
         }
     ]
 }

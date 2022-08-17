@@ -1,0 +1,171 @@
+@media (min-width: 1088px) and (max-width: 1223px){
+    .corpo{
+        margin: 10px 1% !important;
+    }
+}
+
+@media (min-width: 1024px){
+    .corpo{
+        display: flex;
+    }
+}
+
+@media (max-width: 1023.99px){
+    #detalhes h2{
+        text-align: center;
+    }
+
+    #detalhes p{
+        text-align: center;
+    }
+}
+
+.corpo{
+    margin: 10px 8%;
+}
+
+.carrossel{
+    width: 97%;
+    margin-bottom: 3px;
+}
+
+#MiniProduto{
+    width: 27.1%;
+    display: flex;
+    flex-direction: column;
+}
+
+#detalhes{
+    width: 100%;
+    margin: 0px 15px;
+}
+
+#detalhes h1{
+    text-align: center;
+}
+
+#detalhes h2{
+    color: rgb(12, 153, 12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Produto{
+    width: 107%;
+}
+
+#Produto img{
+    width: 100%;
+}
+
+#info{
+    border: solid 0.5px rgb(185, 181, 181);
+    padding: 0px 7px;
+}
+
+#payments{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: -11px;
+}
+#payments img{
+    width: 50%;
+    height: 20px;
+}
+
+#payments p{
+    margin-bottom: 0px;
+}
+
+#pix{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    margin-bottom: -26px;
+}
+
+#pix img{
+    width: 14%;
+    height: 23px;
+}
+
+#boleto{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    margin-bottom: -11px;
+}
+
+#boleto img{
+    width: 17%;
+    height: 23px;
+}
+
+#botão{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#MyInput{
+    border: none;
+    border-top: solid 0.5px rgb(185, 181, 181);
+    border-bottom: solid 0.5px rgb(185, 181, 181);
+    text-align: center;
+    width: 8%;
+    font-size: 20px;
+    padding: 8px -0px;
+}
+
+.botao{
+    display: flex;
+}
+
+#pesquisa::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+#pesquisa { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+#qntd{
+    width: 28%;
+}
+
+.mais{
+    border: solid 0.5px rgb(185, 181, 181);
+}
+
+.menos{
+    border: solid 0.5px rgb(185, 181, 181);
+}
+
+#pesquisa{
+    border-right: none;
+    border-left: none;
+    text-align: center;
+}
+
+#comprar{
+    border: none;
+    background-color: rgb(18, 153, 18);
+    padding: 0px 21%;
+    color: white;
+    position: relative;
+    top: -14px;
+    margin-top: 13px;
+    border-radius: 5px;
+}
+
+#comprar:hover{
+    background-color: rgb(33, 180, 33);
+}
+
+#teste{
+    display: flex;
+}
