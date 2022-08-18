@@ -30,9 +30,9 @@ export default function Productss({produtos}){
     <Row>
         {
           produtos.map((produto) => (
-            <div key={produto.id}>
+            <Col xl={3} lg={3} md={4} sm={6} xs={12} key={produto.id}>
               <ProductsSingle product={produto}/>
-            </div>
+            </Col>
         ))
         }
     </Row>
