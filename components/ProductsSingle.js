@@ -7,9 +7,9 @@ import Link from 'next/link'
 export default function ProductsSingle(product){
     return(
         <Col xl={3} xs={6}>
-            <Link href="../products/{{categoria}}/{{product}}">
+            <Link href={"/produto/" + product.product?.nome }>
                 <div className={styles.produto}>
-                    <img src="/images/550x550.png"/>
+                    <img src={product.product?.imagens[0]}/>
                     <h4>{product.product?.nome}</h4>
                     <h3 className={styles.preço}>{product.product?.preco}</h3>
                     <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>

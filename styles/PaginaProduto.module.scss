@@ -1,12 +1,22 @@
-@media (min-width: 1088px) and (max-width: 1223px){
+@media (min-width: 1221px){
     .corpo{
+        margin: 10px 8% !important;
+        display: flex;
+    }
+}
+
+@media (min-width: 1024.99px) and (max-width: 1220.99px){
+    .corpo{
+        display: flex;
         margin: 10px 1% !important;
     }
 }
 
-@media (min-width: 1024px){
-    .corpo{
-        display: flex;
+@media (min-width: 725px) and (max-width: 1024.99px){
+    #teste{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -86,7 +96,7 @@
 }
 
 #pix img{
-    width: 14%;
+    width: 61px;
     height: 23px;
 }
 
@@ -98,7 +108,7 @@
 }
 
 #boleto img{
-    width: 17%;
+    width: 74px;
     height: 23px;
 }
 
@@ -154,7 +164,7 @@
 #comprar{
     border: none;
     background-color: rgb(18, 153, 18);
-    padding: 0px 21%;
+    padding: 0px 27%;
     color: white;
     position: relative;
     top: -14px;
@@ -168,4 +178,21 @@
 
 #teste{
     display: flex;
+}
+
+#descrição h1{
+    color: purple;
+    margin-left: 25%;
+}
+
+#descrição p{
+    display: flex;
+    justify-content: flex-start;
+    width: 62%;
+    padding: 2px 76px;
+}
+
+#aproveite{
+    color: purple;
+    text-align: center;
 }

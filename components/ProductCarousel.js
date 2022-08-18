@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Carousel2 from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 
 
@@ -28,11 +29,12 @@ import styles from '../styles/Home.module.css'
 
     return(
     <>
-    <h1 className={styles.titulo}>Mais Vendidos</h1>
+    {/*<h1 className={styles.titulo}>Mais Vendidos</h1>*/}
     
 
     <div className={styles.CarrosselP}>
       <Carousel2 responsive={responsive} infinite={true}>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
               <img src="/images/550x550.png"/>
@@ -42,6 +44,8 @@ import styles from '../styles/Home.module.css'
               <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -51,6 +55,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -60,6 +66,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -69,6 +77,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -78,6 +88,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -87,6 +99,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -96,6 +110,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -105,6 +121,8 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
+        <Link href="../products/Herois/Miranha">
         <div className={styles.Pmaisvendidos}>
           <div className={styles.produto}>
             <img src="/images/550x550.png"/>
@@ -114,6 +132,7 @@ import styles from '../styles/Home.module.css'
             <Button variant="success" className={styles.comprar}>Comprar</Button>
           </div>
         </div>
+        </Link>
       </Carousel2>
       </div>
     

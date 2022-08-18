@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nome": "herois"
+    },
+    {
+        "id": 2,
+        "nome": "series"
+    },
+    {
+        "id": 3,
+        "nome": "animes"
+    },
+    {
+        "id": 4,
+        "nome": "filmes"
+    }
+]

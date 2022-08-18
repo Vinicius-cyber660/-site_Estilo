@@ -1,30 +1,59 @@
-import styles from '../../../styles/PaginaProduto.module.scss'
+import { useRouter } from 'next/router'
+import { Row, Col } from 'react-bootstrap';
+import ProductsSingle from '../../components/ProductsSingle'
+import styles from '../../styles/PaginaProduto.module.scss'
 import React from 'react';
 import {useRef, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import ProductsCarousel from '../../../components/ProductCarousel';
+import ProductsCarousel from '../../components/ProductCarousel';
+
+export async function getStaticPaths() {
+    const res = await fetch('http://localhost:4000/produtos');
+    const produtos = await res.json();
+
+    const paths = produtos.map(_produto => ({
+        params: {
+            slug: _produto.nome,
+        }
+    }));
+    return { paths, fallback: false }
+}
 
 
-export default function Miranha(){
+export async function getStaticProps({params}) {
+    const res = await fetch(`http://localhost:4000/produtos`);
+    const produtos = await res.json();
+
+    const item = produtos.find(_produto => _produto.nome === params.slug);
+
+    return { props: { item } }
+}  
+
+
+export default function Produto(  {item}  ){
+    const router = useRouter()
+
+    const { slug } = router.query
+
     return <>
     <div className={styles.corpo}>
         <div id={styles.teste}>
             <div id={styles.MiniProduto}>
-                <img className={styles.carrossel} src="/images/550x550.png"/>
+                <img className={styles.carrossel} src={item?.imagens[1]}/>
                 <img className={styles.carrossel} src="/images/550x550.png"/>
                 <img className={styles.carrossel} src="/images/550x550.png"/>
                 <img className={styles.carrossel} src="/images/550x550.png"/>
             </div>
             <div id={styles.Produto}>
-                <img src="/images/550x550.png"/>
+                <img src={item?.imagens[0]}/>
             </div> 
         </div>
 
 
         <div id={styles.detalhes}>
-            <h1>Homem-Aranha</h1>
+            <h1>{item?.nome}</h1>
             <hr/>
             <h2>R$28,00</h2>
             <p>até <strong>3x</strong> de <strong>R$9.33</strong> sem juros</p>

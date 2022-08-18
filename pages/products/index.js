@@ -16,29 +16,23 @@ for (let number = 1; number <= 5; number++) {
   );
 }
 
+export async function getStaticProps() {
+  const res = await fetch(`http://localhost:4000/produtos`);
+  const produtos = await res.json();
 
+  return { props: { produtos } }
+}  
 
-export default function Productss(){
+export default function Productss({produtos}){
     return (<>
     <div id={styles.corpo}>
     <h1 className={styles.titulo}>Página de Produtos</h1>
     <Row>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
-        <ProductsSingle/>
+        {
+          produtos.map((produto) => (
+            <ProductsSingle product={produto}/>
+        ))
+        }
     </Row>
     
     
