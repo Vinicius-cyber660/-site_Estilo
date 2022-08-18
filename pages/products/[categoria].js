@@ -47,9 +47,9 @@ export default function Categoria(  {item, products}  ){
     <Row>
         {
             products.map((_produto, i) => (
-                <Col key={_produto.id}>
+                <div key={_produto.id}>
                     <ProductsSingle product={_produto}/>
-                </Col>
+                </div>
             ))
         }
     </Row>
