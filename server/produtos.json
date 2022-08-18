@@ -9,7 +9,7 @@
             "/images/homemDeFerro1.png",
             "/images/homemDeFerro2.png",
             "/images/homemDeFerro3.png",
-            "/images/homemDeFerro4.png"
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
@@ -22,7 +22,7 @@
             "/images/homemAranha1.png",
             "/images/homemAranha2.png",
             "/images/homemAranha3.png",
-            "/images/homemAranha4.png"
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
@@ -31,11 +31,11 @@
         "preco": "R$ 80,00",
         "categoria": 2,
         "imagens": [
-            "/images/LedZeppelin0.jpg",
+            "/images/LedZeppelin0.png",
             "/images/LedZeppelin1.png",
             "/images/LedZeppelin2.png",
             "/images/LedZeppelin3.png",
-            "/images/homemDeFerro4.png"
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
