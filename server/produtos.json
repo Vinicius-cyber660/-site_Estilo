@@ -5,11 +5,11 @@
         "preco": "R$ 100,00",
         "categoria": 1,
         "imagens": [
-            "images/homemDeFerro0.jpg",
-            "images/homemDeFerro1.png",
-            "images/homemDeFerro2.png",
-            "images/homemDeFerro3.png",
-            "images/homemDeFerro4.png"
+            "/images/homemDeFerro0.jpg",
+            "/images/homemDeFerro1.png",
+            "/images/homemDeFerro2.png",
+            "/images/homemDeFerro3.png",
+            "/images/homemDeFerro4.png"
         ]
     },
     {
