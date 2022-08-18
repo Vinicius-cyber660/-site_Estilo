@@ -10,7 +10,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import ProductsCarousel from '../../components/ProductCarousel';
 
 export async function getStaticPaths() {
-    const res = await fetch('http://localhost:4000/produtos');
+    const res = await fetch('https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json');
     const produtos = await res.json();
 
     const paths = produtos.map(_produto => ({
