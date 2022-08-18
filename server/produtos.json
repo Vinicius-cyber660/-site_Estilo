@@ -5,9 +5,11 @@
         "preco": "R$ 100,00",
         "categoria": 1,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -16,9 +18,11 @@
         "preco": "R$ 120,00",
         "categoria": 1,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -27,9 +31,11 @@
         "preco": "R$ 80,00",
         "categoria": 2,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -38,9 +44,11 @@
         "preco": "R$ 90,00",
         "categoria": 2,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -49,9 +57,11 @@
         "preco": "R$ 70,00",
         "categoria": 4,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -60,9 +70,11 @@
         "preco": "R$ 80,00",
         "categoria": 3,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -71,9 +83,11 @@
         "preco": "R$ 90,00",
         "categoria": 4,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     },
     {
@@ -82,9 +96,11 @@
         "preco": "R$ 100,00",
         "categoria": 4,
         "imagens": [
-            "/images/homem_de_ferro.JPG",
-            "/images/homem_de_ferro_2.png",
-            ""
+            "images/homem_de_ferro.jpg",
+            "images/homem_de_ferro_2.png",
+            "images/homemDeFerro2.png",
+            "images/homem_de_ferro_2.png",
+            "images/homem_de_ferro_2.png"
         ]
     }
 ]

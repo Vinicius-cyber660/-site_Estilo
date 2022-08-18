@@ -42,9 +42,9 @@ export default function Produto(  {item}  ){
         <div id={styles.teste}>
             <div id={styles.MiniProduto}>
                 <img className={styles.carrossel} src={item?.imagens[1]}/>
-                <img className={styles.carrossel} src="/images/550x550.png"/>
-                <img className={styles.carrossel} src="/images/550x550.png"/>
-                <img className={styles.carrossel} src="/images/550x550.png"/>
+                <img className={styles.carrossel} src={item?.imagens[2]}/>
+                <img className={styles.carrossel} src={item?.imagens[3]}/>
+                <img className={styles.carrossel} src={item?.imagens[4]}/>
             </div>
             <div id={styles.Produto}>
                 <img src={item?.imagens[0]}/>
