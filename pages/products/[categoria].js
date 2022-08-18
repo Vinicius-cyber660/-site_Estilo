@@ -5,7 +5,7 @@ import ProductsSingle from '../../components/ProductsSingle'
 /* cria todas as rotas possíveis */
 export async function getStaticPaths() {
     /* pega a lista de categorias do servidor e transforma em objeto do tipo json */
-    const res = await fetch('http://localhost:4000/categorias');
+    const res = await fetch('https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/categorias.json');
     const categorias = await res.json();
 
     /* para cada _categoria, mande (retorne) o nome como parametro para getStaticProps */
@@ -21,14 +21,14 @@ export async function getStaticPaths() {
 
 /* para cada página possivel, vai pegar as propriedades (categorias do server) */
 export async function getStaticProps({params}) {
-    const res = await fetch(`http://localhost:4000/categorias`);
+    const res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/categorias.json`);
     const categorias = await res.json();
 
     /* para cada página, mande (retorne) para página Categoria um item de categorias
     cujo nome seja igual ao parametro passado pela getStaticPaths */
     const item = categorias.find(_categoria => _categoria.nome === params.categoria);
 
-    const p_res = await fetch(`http://localhost:4000/produtos`);
+    const p_res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json`);
     const produtos = await p_res.json();
     const products = produtos.filter(_produto => _produto.categoria === item.id);
     return { props: { item, products } }

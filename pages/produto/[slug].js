@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps({params}) {
-    const res = await fetch(`http://localhost:4000/produtos`);
+    const res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json`);
     const produtos = await res.json();
 
     const item = produtos.find(_produto => _produto.nome === params.slug);
