@@ -27,14 +27,14 @@
     },
     {
         "id": 3,
-        "nome": "Dean Winchester",
+        "nome": "Led Zeppelin",
         "preco": "R$ 80,00",
         "categoria": 2,
         "imagens": [
-            "/images/homemDeFerro0.jpg",
-            "/images/homemDeFerro1.png",
-            "/images/homemDeFerro2.png",
-            "/images/homemDeFerro3.png",
+            "/images/LedZeppelin0.jpg",
+            "/images/LedZeppelin1.png",
+            "/images/LedZeppelin2.png",
+            "/images/LedZeppelin3.png",
             "/images/homemDeFerro4.png"
         ]
     },
