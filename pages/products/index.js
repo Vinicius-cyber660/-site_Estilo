@@ -30,7 +30,9 @@ export default function Productss({produtos}){
     <Row>
         {
           produtos.map((produto) => (
-            <ProductsSingle product={produto}/>
+            <Col key={produto.id}>
+              <ProductsSingle product={produto}/>
+            </Col>
         ))
         }
     </Row>
