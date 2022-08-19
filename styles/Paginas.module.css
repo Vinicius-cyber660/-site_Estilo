@@ -1,0 +1,12 @@
+.corpo{
+    margin: 0px 12%;
+}
+
+.corpo h2{
+    text-align: center;
+}
+
+#bemVindo{
+    text-align: center;
+    color: gray;
+}

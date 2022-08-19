@@ -1,3 +1,13 @@
 .container{
     min-height: 60vh;
 }
+
+#whats2{
+    position:fixed;
+    bottom:20px;
+    left:30px;
+}
+
+#whatsimage{
+    width: 80px;
+}

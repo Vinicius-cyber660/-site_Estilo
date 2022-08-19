@@ -4,9 +4,8 @@ import 'react-multi-carousel/lib/styles.css';
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-
-
   export default function ProductsCarousel(){
+
     const responsive = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
