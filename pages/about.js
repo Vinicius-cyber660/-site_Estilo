@@ -15,8 +15,8 @@ export default function about() {
         Nós trabalhamos com canecas de alta qualidade para sempre entregar o melhor produto
         final para nossos clientes.<br/>
          <br/>
-        Trazemos sempre o'que está em alta no mundo dos personalizados, com muita inovação,
-        criatividade e EXCLUSIVIDADE para VOCÊ cliente, sair de nossa loja/site com o'que veio
+        Trazemos sempre o que está em alta no mundo dos personalizados, com muita inovação,
+        criatividade e EXCLUSIVIDADE para VOCÊ cliente, sair de nossa loja/site com o que veio
         em mente e satisfeito.<br/>
         <br/>
         Nossas artes estampadas são criadas por nossa equipe de designers que está sempre por
