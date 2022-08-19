@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nome": "Homem de Ferro",
-        "preco": "R$ 100,00",
+        "preco": "R$ 28,00",
         "categoria": 1,
         "imagens": [
             "/images/homemDeFerro0.jpg",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "nome": "Homem Aranha",
-        "preco": "R$ 120,00",
+        "preco": "R$ 28,00",
         "categoria": 1,
         "imagens": [
             "/images/homemAranha0.jpg",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "nome": "Led Zeppelin",
-        "preco": "R$ 80,00",
+        "preco": "R$ 28,00",
         "categoria": 2,
         "imagens": [
             "/images/LedZeppelin0.png",
@@ -41,66 +41,66 @@
     {
         "id": 4,
         "nome": "Flash",
-        "preco": "R$ 90,00",
+        "preco": "R$ 28,00",
         "categoria": 2,
         "imagens": [
-            "/images/homemDeFerro0.jpg",
-            "/images/homemDeFerro1.png",
-            "/images/homemDeFerro2.png",
-            "/images/homemDeFerro3.png",
-            "/images/homemDeFerro4.png"
+            "/images/Flash0.png",
+            "/images/Flash1.png",
+            "/images/Flash2.png",
+            "/images/Flash3.png",
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
         "id": 5,
         "nome": "Viuva Negra",
-        "preco": "R$ 70,00",
+        "preco": "R$ 28,00",
         "categoria": 4,
         "imagens": [
             "/images/homemDeFerro0.jpg",
             "/images/homemDeFerro1.png",
             "/images/homemDeFerro2.png",
             "/images/homemDeFerro3.png",
-            "/images/homemDeFerro4.png"
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
         "id": 6,
         "nome": "Saitama",
-        "preco": "R$ 80,00",
+        "preco": "R$ 28,00",
         "categoria": 3,
         "imagens": [
             "/images/homemDeFerro0.jpg",
             "/images/homemDeFerro1.png",
             "/images/homemDeFerro2.png",
             "/images/homemDeFerro3.png",
-            "/images/homemDeFerro4.png"
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
         "id": 7,
         "nome": "Os Incríveis",
-        "preco": "R$ 90,00",
+        "preco": "R$ 28,00",
         "categoria": 4,
         "imagens": [
             "/images/homemDeFerro0.jpg",
             "/images/homemDeFerro1.png",
             "/images/homemDeFerro2.png",
             "/images/homemDeFerro3.png",
-            "/images/homemDeFerro4.png"
+            "/images/TamanhoCaneca.png"
         ]
     },
     {
         "id": 8,
         "nome": "Os Incríveis 2",
-        "preco": "R$ 100,00",
+        "preco": "R$ 28,00",
         "categoria": 4,
         "imagens": [
             "/images/homemDeFerro0.jpg",
             "/images/homemDeFerro1.png",
             "/images/homemDeFerro2.png",
             "/images/homemDeFerro3.png",
-            "/images/homemDeFerro4.png"
+            "/images/TamanhoCaneca.png"
         ]
     }
 ]
