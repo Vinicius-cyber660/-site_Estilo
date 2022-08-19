@@ -60,8 +60,11 @@ export default function Footer(){
                         Alguma dúvida? Nos chame.<br/>
                         <br/>
                     <div id={styles.whats}>
-                        <img src='/images/whatsapp.png'/>
-                        <a>(12)98272-9709</a>
+                        <Link href="https://api.whatsapp.com/send?phone=5512982729709&text=Estilo%20Criação%20a%20seu%20dispor">
+                            <a target="_blank">
+                            <img src='/images/whatsapp.png'/>
+                            (12)98272-9709</a>
+                        </Link>
                     </div>
                     </div>
                     <div className={styles.child2}>
@@ -135,7 +138,7 @@ export default function Footer(){
             </div>
             <div id={styles.containerF}>
                 <div id={styles.email}>
-                    <p>estilocriacao1@gmail.com</p>
+                    <p><Link href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJXKjxljhWMbBbNQbJbgfDsHLSlkkmdKlRwwVJRFvRRDZKtcmXBpkvtPScMrfCwFPZBg"><a target="_blank">estilocriacao1@gmail.com</a></Link></p>
                     <img src="/images/payments.png"/>
                 </div> 
             </div> 
