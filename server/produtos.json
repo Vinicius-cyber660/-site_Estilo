@@ -102,5 +102,57 @@
             "/images/homemDeFerro3.png",
             "/images/TamanhoCaneca.png"
         ]
+    },
+    {
+        "id": 9,
+        "nome": "Os Incríveis 2",
+        "preco": "R$ 28,00",
+        "categoria": 4,
+        "imagens": [
+            "/images/homemDeFerro0.jpg",
+            "/images/homemDeFerro1.png",
+            "/images/homemDeFerro2.png",
+            "/images/homemDeFerro3.png",
+            "/images/TamanhoCaneca.png"
+        ]
+    },
+    {
+        "id": 10,
+        "nome": "Os Incríveis 2",
+        "preco": "R$ 28,00",
+        "categoria": 4,
+        "imagens": [
+            "/images/homemDeFerro0.jpg",
+            "/images/homemDeFerro1.png",
+            "/images/homemDeFerro2.png",
+            "/images/homemDeFerro3.png",
+            "/images/TamanhoCaneca.png"
+        ]
+    },
+    {
+        "id": 11,
+        "nome": "Os Incríveis 2",
+        "preco": "R$ 28,00",
+        "categoria": 4,
+        "imagens": [
+            "/images/homemDeFerro0.jpg",
+            "/images/homemDeFerro1.png",
+            "/images/homemDeFerro2.png",
+            "/images/homemDeFerro3.png",
+            "/images/TamanhoCaneca.png"
+        ]
+    },
+    {
+        "id": 12,
+        "nome": "Os Incríveis 2",
+        "preco": "R$ 28,00",
+        "categoria": 4,
+        "imagens": [
+            "/images/homemDeFerro0.jpg",
+            "/images/homemDeFerro1.png",
+            "/images/homemDeFerro2.png",
+            "/images/homemDeFerro3.png",
+            "/images/TamanhoCaneca.png"
+        ]
     }
 ]

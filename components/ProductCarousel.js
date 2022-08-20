@@ -4,7 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-  export default function ProductsCarousel(){
+  export default function ProductsCarousel({itens}){
 
     const responsive = {
       superLargeDesktop: {
@@ -24,114 +24,32 @@ import Link from 'next/link'
         breakpoint: { max: 600, min: 0 },
         items: 2
       }
-    }; 
+    };
 
     return(
     <>
     {/*<h1 className={styles.titulo}>Mais Vendidos</h1>*/}
-    
 
     <div className={styles.CarrosselP}>
       <Carousel2 responsive={responsive} infinite={true}>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-              <img src="/images/550x550.png"/>
-              <h4>Caneca Miranha</h4>
-              <h3 className={styles.preço}>R$28,00</h3>
-              <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-              <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
-        <Link href="../products/Herois/Miranha">
-        <div className={styles.Pmaisvendidos}>
-          <div className={styles.produto}>
-            <img src="/images/550x550.png"/>
-            <h4>Caneca Miranha</h4>
-            <h3 className={styles.preço}>R$28,00</h3>
-            <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-            <Button variant="success" className={styles.comprar}>Comprar</Button>
-          </div>
-        </div>
-        </Link>
+
+        {
+          itens?.map((item) => {
+            return <>
+              <Link href={"/produto/" + item?.nome}>
+                <div className={styles.Pmaisvendidos}>
+                  <div className={styles.produto}>
+                      <img src={item?.imagens[0]}/>
+                      <h4>{item?.nome}</h4>
+                      <h3 className={styles.preço}>{item?.preco}</h3>
+                      <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
+                      <Button variant="success" className={styles.comprar}>Comprar</Button>
+                  </div>
+                </div>
+              </Link>
+            </>
+          })
+        }
       </Carousel2>
       </div>
     

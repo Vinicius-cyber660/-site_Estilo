@@ -9,7 +9,17 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductsCarousel from '../components/ProductCarousel';
 
-export default function Home(){
+export async function getStaticProps() {
+  let res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json`);
+  const produtos = await res.json();
+
+  let _res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/categorias.json`);
+  const categorias = await _res.json();
+
+  return { props: { produtos, categorias } }
+}  
+
+export default function Home({produtos, categorias}){
   return(
     <>
     <Head>
@@ -51,11 +61,16 @@ export default function Home(){
         </div> 
       </div>
     </div>
+    {
+      categorias.map((categoria) => {
+        let _produtos = produtos.filter((item) => item.categoria == categoria.id )
+        console.log(_produtos);
+        return <>
+            <ProductsCarousel itens={_produtos}/>
+        </>
+      })
+    }
 
-    <ProductsCarousel/>
-    <ProductsCarousel/>
-    <ProductsCarousel/>
-    <ProductsCarousel/>
     </>
   )
 }
