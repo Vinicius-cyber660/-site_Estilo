@@ -138,7 +138,7 @@ export default function Footer(){
             </div>
             <div id={styles.containerF}>
                 <div id={styles.email}>
-                    <p><Link href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJXKjxljhWMbBbNQbJbgfDsHLSlkkmdKlRwwVJRFvRRDZKtcmXBpkvtPScMrfCwFPZBg"><a target="_blank">estilocriacao1@gmail.com</a></Link></p>
+                    <p><Link href="https://mail.google.com/mail/u/0/#inbox?compose=LRmDGdFZMwMvNpnzltfxVWwCNZRDpfwHJWChWHgbZBxNZMbLrkTZxtkgjlLdGpKtWTqHlQFRDqtttQLdHwnCRHscKTlzPNhXcmfXCBJMxfLxfrgTqjVDxBNxtBfhKSxwLzjJMKLqClZqPQKQznrrvMpFBlsNNs"><a  id={styles.emailT} target="_blank">estilocriacao1@gmail.com</a></Link></p>
                     <img src="/images/payments.png"/>
                 </div> 
             </div> 

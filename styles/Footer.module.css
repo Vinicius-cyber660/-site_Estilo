@@ -91,6 +91,12 @@
     #email p{
         margin-bottom: 15px;
         text-align: center;
+        margin-left: 0px !important;
+    }
+
+    #emailT a{
+        color: purple !important;
+        text-decoration: none;
     }
 
     #email img{
@@ -338,7 +344,7 @@
 /*embaixo do footer*/
 #containerF{
     background-color: #202121;
-    padding: 10px 139px;
+    padding: 10px 55px;
     margin-top: -1px;
 }
 #email{
@@ -352,7 +358,14 @@
 #email p{
     margin-top: 10px;
     font-size: 19px;
+    margin-left: 60px;
 }
+
+#email a{
+    color: rgb(168, 81, 168);;
+    text-decoration: none;
+}
+
 #email img{
     margin-left: auto;
     height: 20px;

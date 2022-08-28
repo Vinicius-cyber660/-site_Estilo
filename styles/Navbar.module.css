@@ -244,6 +244,13 @@
     color: rgb(99, 16, 132)
 }
 
+#category button{
+    width: 127%;
+    height: 57px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
 #bodymenu{
     background-color: rgb(242, 242, 242);
 }
@@ -528,11 +535,10 @@
     width: 150%;
 }
 #drop2{
-    display: flex;
     position: relative;
-    top: -1px;
+    top: -2.9px !important;
     left: -11px !important;
-    width: 220%;
+    width: 900%;
     border-radius: 0px;
 }
 
@@ -544,3 +550,6 @@
     opacity: 100%;
 }
 
+#itens{
+    display: flex;
+}

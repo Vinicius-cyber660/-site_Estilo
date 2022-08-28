@@ -7,20 +7,15 @@ import Facebook from '../components/Facebook';
 
 const clientId = "679462750159-7ragf3niqd3bn0629tmpttj18o3ehel2.apps.googleusercontent.com"
 
-function Login( ){
-  return (
-    <div id="signInButton">
-      <Facebook/>
-    </div>
-  )
-}
 
 export default function login(){
     return(<>
 
             <div id={styles.login}>
                 <h1>Entrar com</h1>
-                <Login/>
+                <div id="signInButton">
+                  <Facebook/>
+                </div>
             </div>
             
             </>

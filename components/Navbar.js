@@ -10,6 +10,57 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+function BasicExample() {
+  return (
+    <Dropdown>
+      <Dropdown.Toggle variant="transparent" id="dropdown-basic">
+        Categorias
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu id={styles.drop2}>
+        <Row id={styles.itens}>
+          <Col className={styles.colunas}>
+            <Dropdown.Item href="/products/Herois">Religião</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois/Miranha">Futebol</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois/Batma">Anime</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Filme</Dropdown.Item>
+            <Dropdown.Item href="/produto/Caneca%20Sandman">Série</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Música</Dropdown.Item>
+          </Col>
+          <Col className={styles.colunas}>
+            <Dropdown.Item href="/products/Herois">Flork</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Marvel</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">DC Comics</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Heróis</Dropdown.Item>
+            <Dropdown.Item href="/produto/Caneca%20Coringa">Vilões</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Natal</Dropdown.Item>
+          </Col>
+          <Col className={styles.colunas}>
+            <Dropdown.Item href="/products/Herois">Dia dos Namorados</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Dia dos Pais</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Dia das Mães</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Sem Foto</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Com Foto</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Personalizada</Dropdown.Item>
+          </Col>
+          <Col className={styles.colunas}>
+            <Dropdown.Item href="/products/Herois">Infantil</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Jogos</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Famosos</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Esporte</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Pet</Dropdown.Item>
+            <Dropdown.Item href="/products/Herois">Terror</Dropdown.Item>
+          </Col>
+        </Row>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+}
+
+
+
+
+
 export default function Navbar(){
     const [show, setShow] = useState(false);
 
@@ -160,47 +211,10 @@ export default function Navbar(){
     </div>
     <div id={styles.nav}>
       <div id={styles.category}>
-        <Dropdown className={styles.drop}>
-          <Dropdown.Toggle variant="white" id="dropdown-basic">
-            <i className={"fa-solid fa-bars"}></i><span>Categorias</span>
-          </Dropdown.Toggle>
-          <Dropdown.Menu id={styles.drop2}>
-            <Row>
-              <Col className={styles.colunas}>
-                <Dropdown.Item href="/products/Herois">Religião</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois/Miranha">Futebol</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois/Batma">Anime</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Filme</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Série</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Música</Dropdown.Item>
-              </Col>
-              <Col className={styles.colunas}>
-                <Dropdown.Item href="/products/Herois">Flork</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Marvel</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">DC Comics</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Heróis</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Vilões</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Natal</Dropdown.Item>
-              </Col>
-              <Col className={styles.colunas}>
-                <Dropdown.Item href="/products/Herois">Dia dos Namorados</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Dia dos Pais</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Dia das Mães</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Sem Foto</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Com Foto</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Personalizada</Dropdown.Item>
-              </Col>
-              <Col className={styles.colunas}>
-                <Dropdown.Item href="/products/Herois">Infantil</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Jogos</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Famosos</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Esporte</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Pet</Dropdown.Item>
-                <Dropdown.Item href="/products/Herois">Terror</Dropdown.Item>
-              </Col>
-            </Row>
-          </Dropdown.Menu>
-        </Dropdown>
+        <BasicExample/>
+
+
+
       </div>
       <div id={styles.list}>
         <ul id={styles.lista}>

@@ -12,7 +12,6 @@ import ProductsCarousel from '../../components/ProductCarousel';
 export async function getStaticPaths() {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
     const resjson = await res.json();
-    console.log("dsadasdasdasdas");
 
     const produtos = resjson.retorno.produtos;
     const paths = produtos.map(_produto => ({
@@ -22,7 +21,6 @@ export async function getStaticPaths() {
     }));
     return { paths, fallback: false }
 }
-
 
 export async function getStaticProps({params}) {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
@@ -114,10 +112,7 @@ export default function Produto(  {item, produtos}  ){
     </div>
     <div id={styles.descrição}>
         <h1>descrição</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nihil harum dolores recusandae? Dicta consequatur architecto, omnis, voluptatibus illum commodi quam neque nostrum repudiandae ullam quos incidunt deserunt non quis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quae fugiat dignissimos omnis ex esse voluptate quasi accusamus repellendus illo atque saepe hic, voluptates voluptatum facere laboriosam vel sit quis?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eos, facere rerum, autem eaque eius magni quo consequuntur ipsa nulla tenetur, temporibus soluta fuga? Optio aspernatur laboriosam dolore autem quasi.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus nesciunt, tempore nemo temporibus praesentium aliquam consequuntur necessitatibus blanditiis excepturi accusamus pariatur laudantium id quis repellat iure quibusdam recusandae deserunt.
+        <p>{item?.descricaoCurta}
         </p>
     </div>
     <h2 id={styles.aproveite}>Aproveite tambem</h2>
