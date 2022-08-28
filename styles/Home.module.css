@@ -95,9 +95,6 @@
   cursor: pointer;
 }
 
-
-
-
 .produto p{
   text-align: center;
   position: relative;
@@ -136,6 +133,6 @@
   position: inherit;
 }
 
-
-
-
+.categoria_titulo {
+  text-align: center;
+}

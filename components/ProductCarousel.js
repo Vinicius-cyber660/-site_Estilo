@@ -39,7 +39,7 @@ import Link from 'next/link'
               <Link href={"/produto/" + item?.produto.descricao}>
                 <div className={styles.Pmaisvendidos}>
                   <div className={styles.produto}>
-                      <img src={item?.produto.imagem[0]?.link}/>
+                      <img src={item?.produto?.imagem[0]?.link}/>
                       <h4>{item?.produto.descricao}</h4>
                       <h3 className={styles.preço}>{Number.parseFloat(item?.produto.preco).toFixed(2)}</h3>
                       <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>

@@ -10,16 +10,19 @@ import 'react-multi-carousel/lib/styles.css';
 import ProductsCarousel from '../components/ProductCarousel';
 
 export async function getStaticProps() {
-  let res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json`);
-  const produtos = await res.json();
+  let res = await fetch(`https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S`);
+  const resp = await res.json();
+  const produtos = resp.retorno.produtos;
 
-  let _res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/categorias.json`);
-  const categorias = await _res.json();
+  let _res = await fetch(`https://bling.com.br/Api/v2/categorias/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc`);
+  const resc = await _res.json();
+  const categorias = resc.retorno.categorias;
 
   return { props: { produtos, categorias } }
 }  
 
 export default function Home({produtos, categorias}){
+  console.log(categorias);
   return(
     <>
     <Head>
@@ -63,9 +66,11 @@ export default function Home({produtos, categorias}){
     </div>
     {
       categorias.map((categoria) => {
-        let _produtos = produtos.filter((item) => item.categoria == categoria.id )
+        console.log(categoria);
+        let _produtos = produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id )
         console.log(_produtos);
         return <>
+            <Row className="text-center mt-4"><h1>{categoria.categoria.descricao}</h1></Row>
             <ProductsCarousel itens={_produtos}/>
         </>
       })
