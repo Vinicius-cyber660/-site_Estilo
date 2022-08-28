@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
+    const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S');
     const resjson = await res.json();
     const produtos = resjson.retorno.produtos
 
@@ -39,18 +39,18 @@ export default function Produto(  {item, produtos}  ){
     const { slug } = router.query
 
     let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
-    console.log(item?.id);
+    console.log(item?.imagem);
     return <>
     <div className={styles.corpo}>
         <div id={styles.teste}>
             <div id={styles.MiniProduto}>
-                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/2.jpg"}/>
-                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/3.jpg"}/>
-                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/4.jpg"}/>
-                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/5.jpg"}/>
+                <img className={styles.carrossel} src={item?.imagem[5]?.link}/>
+                <img className={styles.carrossel} src={item?.imagem[4]?.link}/>
+                <img className={styles.carrossel} src={item?.imagem[3]?.link}/>
+                <img className={styles.carrossel} src={item?.imagem[1]?.link}/>
             </div>
             <div id={styles.Produto}>
-                <img src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/1.jpg"}/>
+                <img src={item?.imagem[2]?.link}/>
             </div> 
         </div>
         <div id={styles.detalhes}>
@@ -116,6 +116,6 @@ export default function Produto(  {item, produtos}  ){
         </p>
     </div>
     <h2 id={styles.aproveite}>Aproveite tambem</h2>
-    {/* <ProductsCarousel itens={produtos_categoria}/> */}
+    <ProductsCarousel itens={produtos_categoria}/>
     </>
 }

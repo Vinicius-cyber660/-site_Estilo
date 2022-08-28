@@ -36,12 +36,12 @@ import Link from 'next/link'
         {
           itens?.map((item) => {
             return <>
-              <Link href={"/produto/" + item?.nome}>
+              <Link href={"/produto/" + item?.produto.descricao}>
                 <div className={styles.Pmaisvendidos}>
                   <div className={styles.produto}>
-                      <img src={item?.imagens[0]}/>
-                      <h4>{item?.nome}</h4>
-                      <h3 className={styles.preço}>{item?.preco}</h3>
+                      <img src={item?.produto.imagem[0]?.link}/>
+                      <h4>{item?.produto.descricao}</h4>
+                      <h3 className={styles.preço}>{Number.parseFloat(item?.produto.preco).toFixed(2)}</h3>
                       <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
                       <Button variant="success" className={styles.comprar}>Comprar</Button>
                   </div>
