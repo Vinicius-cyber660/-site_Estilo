@@ -10,12 +10,14 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import ProductsCarousel from '../../components/ProductCarousel';
 
 export async function getStaticPaths() {
-    const res = await fetch('https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json');
-    const produtos = await res.json();
+    const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
+    const resjson = await res.json();
+    console.log("dsadasdasdasdas");
 
+    const produtos = resjson.retorno.produtos;
     const paths = produtos.map(_produto => ({
         params: {
-            slug: _produto.nome,
+            slug: _produto.produto.descricao,
         }
     }));
     return { paths, fallback: false }
@@ -23,37 +25,38 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps({params}) {
-    const res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json`);
-    const produtos = await res.json();
+    const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
+    const resjson = await res.json();
+    const produtos = resjson.retorno.produtos
 
-    const item = produtos.find(_produto => _produto.nome === params.slug);
+    const item = produtos.find(_produto => _produto.produto.descricao === params.slug).produto;
 
-    return { props: { item } }
+    return { props: { item , produtos} }
 }  
 
 
-export default function Produto(  {item}  ){
+export default function Produto(  {item, produtos}  ){
     const router = useRouter()
-
+    console.log(produtos);
     const { slug } = router.query
 
+    let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
+    console.log(item?.id);
     return <>
     <div className={styles.corpo}>
         <div id={styles.teste}>
             <div id={styles.MiniProduto}>
-                <img className={styles.carrossel} src={item?.imagens[1]}/>
-                <img className={styles.carrossel} src={item?.imagens[2]}/>
-                <img className={styles.carrossel} src={item?.imagens[3]}/>
-                <img className={styles.carrossel} src={item?.imagens[4]}/>
+                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/2.jpg"}/>
+                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/3.jpg"}/>
+                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/4.jpg"}/>
+                <img className={styles.carrossel} src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/5.jpg"}/>
             </div>
             <div id={styles.Produto}>
-                <img src={item?.imagens[0]}/>
+                <img src={"https://raw.githubusercontent.com/Vinicius-cyber660/imagens_estilo/main/"+item?.id+"/1.jpg"}/>
             </div> 
         </div>
-
-
         <div id={styles.detalhes}>
-            <h1>{item?.nome}</h1>
+            <h1>{item?.descricao}</h1>
             <hr/>
             <h2>R$28,00</h2>
             <p>até <strong>3x</strong> de <strong>R$9.33</strong> sem juros</p>
@@ -118,6 +121,6 @@ export default function Produto(  {item}  ){
         </p>
     </div>
     <h2 id={styles.aproveite}>Aproveite tambem</h2>
-    <ProductsCarousel/>
+    {/* <ProductsCarousel itens={produtos_categoria}/> */}
     </>
 }

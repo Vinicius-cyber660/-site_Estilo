@@ -164,7 +164,6 @@ export default function Navbar(){
           <Dropdown.Toggle variant="white" id="dropdown-basic">
             <i className={"fa-solid fa-bars"}></i><span>Categorias</span>
           </Dropdown.Toggle>
-
           <Dropdown.Menu id={styles.drop2}>
             <Row>
               <Col className={styles.colunas}>
