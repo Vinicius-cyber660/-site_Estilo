@@ -14,7 +14,6 @@ export default function login(){
             <div id={styles.login}>
                 <h1>Entrar com</h1>
                 <div id="signInButton">
-                  <Facebook/>
                 </div>
             </div>
             
