@@ -8,9 +8,9 @@ export default function ProductsSingle(product){
     return(
         <Link href={"/produto/" + product.product?.nome }>
             <div className={styles.produto}>
-                <img src={product.product?.imagens[0]}/>
-                <h4>{product.product?.nome}</h4>
-                <h3 className={styles.preço}>{product.product?.preco}</h3>
+                <img src={product.product?.produto.imagem[0].link}/>
+                <h4>{product.product?.produto.descricao}</h4>
+                <h3 className={styles.preço}>R$ {Number.parseFloat(product.product?.produto.preco).toFixed(2)}</h3>
                 <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
                 <Button variant="success" className={styles.comprar}>Comprar</Button>
             </div>

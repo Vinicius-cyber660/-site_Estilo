@@ -17,8 +17,9 @@ for (let number = 1; number <= 5; number++) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`https://raw.githubusercontent.com/Vinicius-cyber660/-site_Estilo/master/server/produtos.json`);
-  const produtos = await res.json();
+    const res = await fetch(`https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S`);
+    const resp = await res.json();
+    const produtos = resp.retorno.produtos;
 
   return { props: { produtos } }
 }  
@@ -30,7 +31,7 @@ export default function Productss({produtos}){
     <Row>
         {
           produtos.map((produto) => (
-            <Col xl={3} lg={3} md={4} sm={6} xs={12} key={produto.id}>
+            <Col xl={3} lg={3} md={4} sm={6} xs={12} key={produto.produto?.id}>
               <ProductsSingle product={produto}/>
             </Col>
         ))
