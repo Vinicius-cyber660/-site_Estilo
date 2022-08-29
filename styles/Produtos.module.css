@@ -60,3 +60,14 @@
     display: flex;
     justify-content: center;
 }
+
+#delimitador h4{
+    width: 100%;
+    height: 58px;
+    display: -webkit-box; 
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

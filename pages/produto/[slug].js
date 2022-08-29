@@ -115,7 +115,7 @@ export default function Produto(  {item, produtos}  ){
         <p>{item?.descricaoCurta}
         </p>
     </div>
-    <h2 id={styles.aproveite}>Aproveite tambem</h2>
+    <h2 id={styles.aproveite}>Aproveite também</h2>
     <ProductsCarousel itens={produtos_categoria}/>
     </>
 }

@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function ProductsSingle(product){
     return(
         <Link href={"/produto/" + product.product?.nome }>
-            <div className={styles.produto}>
+            <div className={styles.produto} id={styles.delimitador}>
                 <img src={product.product?.produto.imagem[0].link}/>
                 <h4>{product.product?.produto.descricao}</h4>
                 <h3 className={styles.preço}>R$ {Number.parseFloat(product.product?.produto.preco).toFixed(2)}</h3>

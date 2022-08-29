@@ -92,7 +92,7 @@ export default function Footer(){
                     <div className={styles.child3}>
                         <h3>Mais informações</h3>
                         <div>
-                            <Link href="/Mais_Informacoes/Sobre_Nos">
+                            <Link href="/about">
                                 <a >Sobre Nós</a>
                             </Link>
                             <Link href="/Mais_Informacoes/Qualidade">

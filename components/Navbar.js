@@ -20,36 +20,36 @@ function BasicExample() {
       <Dropdown.Menu id={styles.drop2}>
         <Row id={styles.itens}>
           <Col className={styles.colunas}>
-            <Dropdown.Item href="/products/Herois">Religião</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois/Miranha">Futebol</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois/Batma">Anime</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Filme</Dropdown.Item>
-            <Dropdown.Item href="/produto/Caneca%20Sandman">Série</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Música</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Religião">Religião</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Futebol">Futebol</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Anime">Anime</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Filme">Filme</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Série">Série</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Música">Música</Dropdown.Item>
           </Col>
           <Col className={styles.colunas}>
-            <Dropdown.Item href="/products/Herois">Flork</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Marvel</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">DC Comics</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Heróis</Dropdown.Item>
-            <Dropdown.Item href="/produto/Caneca%20Coringa">Vilões</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Natal</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Flork">Flork</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Marvel">Marvel</Dropdown.Item>
+            <Dropdown.Item href="/produtos/DC Comics">DC Comics</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Heróis">Heróis</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Vilões">Vilões</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Natal">Natal</Dropdown.Item>
           </Col>
           <Col className={styles.colunas}>
-            <Dropdown.Item href="/products/Herois">Dia dos Namorados</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Dia dos Pais</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Dia das Mães</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Sem Foto</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Com Foto</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Personalizada</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Dia dos Namorados">Dia dos Namorados</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Dia dos Pais">Dia dos Pais</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Dia das Mães">Dia das Mães</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Sem Foto">Sem Foto</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Com Foto">Com Foto</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Personalizada">Personalizada</Dropdown.Item>
           </Col>
           <Col className={styles.colunas}>
-            <Dropdown.Item href="/products/Herois">Infantil</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Jogos</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Famosos</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Esporte</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Pet</Dropdown.Item>
-            <Dropdown.Item href="/products/Herois">Terror</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Infantil">Infantil</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Jogos">Jogos</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Famosos">Famosos</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Esporte">Esporte</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Pet">Pet</Dropdown.Item>
+            <Dropdown.Item href="/produtos/Terror">Terror</Dropdown.Item>
           </Col>
         </Row>
       </Dropdown.Menu>
@@ -95,6 +95,41 @@ export default function Navbar(){
               {showCategory ? '': 'hidden'}
                 <ul onClick={handleClose}>
                   <li>
+                    <Link href="/products/Religião">
+                     <a>Religião</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Futebol">
+                     <a>Futebol</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Anime">
+                     <a>Anime</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Filme">
+                     <a>Filme</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Série">
+                     <a>Série</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Música">
+                     <a>Música</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Flork">
+                     <a>Flork</a>
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/products/Marvel">
                      <a>Marvel</a>
                     </Link>
@@ -105,23 +140,38 @@ export default function Navbar(){
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Dia dos Pais">
-                     <a>Dia dos Pais</a>
+                    <Link href="/products/Heróis">
+                     <a>Heróis</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Dia dos Namorados">
-                     <a>Dia dos Namorados</a>
+                    <Link href="/products/Vilões">
+                     <a>Vilões</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Power Rangers">
-                     <a>Power Rangers</a>
+                    <Link href="/products/Natal">
+                     <a>Natal</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Dia das Mães">
-                     <a>Dia das Mães</a>
+                    <Link href="/products/Dia Dos Namorados">
+                     <a>Dia Dos Namorados</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Dia Dos Pais">
+                     <a>Dia Dos Pais</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Dia Das Mães">
+                     <a>Dia Das Mães</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Sem Foto">
+                     <a>Sem Foto</a>
                     </Link>
                   </li>
                   <li>
@@ -130,8 +180,38 @@ export default function Navbar(){
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Música">
-                     <a>Música</a>
+                    <Link href="/products/Personalizada">
+                     <a>Personalizada</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Infantil">
+                     <a>Infantil</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Jogos">
+                     <a>Jogos</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Famosos">
+                     <a>Famosos</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Esporte">
+                     <a>Esporte</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Pet">
+                     <a>Pet</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/Terror">
+                     <a>Terror</a>
                     </Link>
                   </li>
                 </ul>
@@ -144,7 +224,7 @@ export default function Navbar(){
                 </Link>
               </li>
               <li>
-                <Link href="/products">
+                <Link href="/produtos">
                   <a>Produtos</a>
                 </Link>
               </li>
@@ -224,7 +304,7 @@ export default function Navbar(){
             </Link>
           </li>
           <li>
-            <Link href="/products">
+            <Link href="/produtos">
               <a>Produtos</a>
             </Link>
           </li>

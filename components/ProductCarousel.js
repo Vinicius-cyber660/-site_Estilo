@@ -2,7 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Carousel2 from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Link from 'next/link';
+import { useEffect } from 'react';
 
   export default function ProductsCarousel({itens}){
 
@@ -28,8 +29,6 @@ import Link from 'next/link'
 
     return(
     <>
-    {/*<h1 className={styles.titulo}>Mais Vendidos</h1>*/}
-
     <div className={styles.CarrosselP}>
       <Carousel2 responsive={responsive} infinite={true}>
 
@@ -38,7 +37,7 @@ import Link from 'next/link'
             return <>
               <Link href={"/produto/" + item?.produto.descricao}>
                 <div className={styles.Pmaisvendidos}>
-                  <div className={styles.produto}>
+                  <div className={styles.produto} id={styles.delimitador}>
                       <img src={item?.produto?.imagem[0]?.link}/>
                       <h4>{item?.produto.descricao}</h4>
                       <h3 className={styles.preço}>{Number.parseFloat(item?.produto.preco).toFixed(2)}</h3>

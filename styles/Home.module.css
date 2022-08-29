@@ -131,8 +131,21 @@
 
 .CarrosselP div {
   position: inherit;
+  width: 100%;
 }
 
 .categoria_titulo {
   text-align: center;
+}
+
+
+
+#delimitador h4{
+  width: 100%;
+  height: 54px;
+  display: -webkit-box; 
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
 }
