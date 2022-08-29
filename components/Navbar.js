@@ -95,122 +95,122 @@ export default function Navbar(){
               {showCategory ? '': 'hidden'}
                 <ul onClick={handleClose}>
                   <li>
-                    <Link href="/products/Religião">
+                    <Link href="/produtos/Religião">
                      <a>Religião</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Futebol">
+                    <Link href="/produtos/Futebol">
                      <a>Futebol</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Anime">
+                    <Link href="/produtos/Anime">
                      <a>Anime</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Filme">
+                    <Link href="/produtos/Filme">
                      <a>Filme</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Série">
+                    <Link href="/produtos/Série">
                      <a>Série</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Música">
+                    <Link href="/produtos/Música">
                      <a>Música</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Flork">
+                    <Link href="/produtos/Flork">
                      <a>Flork</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Marvel">
+                    <Link href="/produtos/Marvel">
                      <a>Marvel</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/DC Comics">
+                    <Link href="/produtos/DC Comics">
                      <a>DC Comics</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Heróis">
+                    <Link href="/produtos/Heróis">
                      <a>Heróis</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Vilões">
+                    <Link href="/produtos/Vilões">
                      <a>Vilões</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Natal">
+                    <Link href="/produtos/Natal">
                      <a>Natal</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Dia Dos Namorados">
+                    <Link href="/produtos/Dia Dos Namorados">
                      <a>Dia Dos Namorados</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Dia Dos Pais">
+                    <Link href="/produtos/Dia Dos Pais">
                      <a>Dia Dos Pais</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Dia Das Mães">
+                    <Link href="/produtos/Dia Das Mães">
                      <a>Dia Das Mães</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Sem Foto">
+                    <Link href="/produtos/Sem Foto">
                      <a>Sem Foto</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Com Foto">
+                    <Link href="/produtos/Com Foto">
                      <a>Com Foto</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Personalizada">
+                    <Link href="/produtos/Personalizada">
                      <a>Personalizada</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Infantil">
+                    <Link href="/produtos/Infantil">
                      <a>Infantil</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Jogos">
+                    <Link href="/produtos/Jogos">
                      <a>Jogos</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Famosos">
+                    <Link href="/produtos/Famosos">
                      <a>Famosos</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Esporte">
+                    <Link href="/produtos/Esporte">
                      <a>Esporte</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Pet">
+                    <Link href="/produtos/Pet">
                      <a>Pet</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products/Terror">
+                    <Link href="/produtos/Terror">
                      <a>Terror</a>
                     </Link>
                   </li>
