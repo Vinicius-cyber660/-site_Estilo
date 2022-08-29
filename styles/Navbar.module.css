@@ -233,11 +233,15 @@
 }
 /*nova navbar*/
 #navbarzao{
+    position: sticky;
+    right: 0;
+    top: 0%;
     width: auto;
     height: 100px;
     background-color: rgb(168, 39, 219);
     display: flex;
     padding: 0px 9%;
+    z-index: 1001;
 }
 
 #category{
@@ -249,6 +253,8 @@
     height: 57px;
     margin-top: -10px;
     margin-left: -10px;
+    color: rgb(168, 39, 219);
+    font-size: 120%;
 }
 
 #bodymenu{

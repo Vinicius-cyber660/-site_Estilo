@@ -70,7 +70,7 @@ export default function Home({produtos, categorias}){
         let _produtos = produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id )
         console.log(_produtos);
         return <>
-            <Row className="text-center mt-4"><h1>{categoria.categoria.descricao}</h1></Row>
+            <Row className="text-center mt-4" id={styles.nomeCar}><h1>{categoria.categoria.descricao}</h1></Row>
             <ProductsCarousel itens={_produtos}/>
         </>
       })
