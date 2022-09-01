@@ -49,7 +49,7 @@ export default function Categoria(  {item, products}  ){
         <Row>
             {
             products.map((_produto, i) => (
-                <Col xs={12} sm={6} md={6} lg={3} xl={3} key={_produto.id}>
+                <Col xs={12} sm={6} md={6} lg={3} xl={3} key={_produto?.produto.id}>
                     <ProductsSingle product={_produto}/>
                 </Col>
             ))
