@@ -33,34 +33,40 @@ export default function Home({produtos, categorias}){
     <div>
     <Carousel>
       <Carousel.Item>
-        <img
+        <Image
           className="d-block w-100"
           src="/images/Banner.png"
           alt="First slide"
-        />
+          width="1519.2px"
+          height="500.06"
+        ></Image>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        <Image
           className="d-block w-100"
           src="/images/Banner2.png"
           alt="Second slide"
-        />
+          width="1519.2px"
+          height="500.06"
+        ></Image>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        <Image
           className="d-block w-100"
           src="/images/Banner3.png"
           alt="Third slide"
-        />
+          width="1519.2px"
+          height="500.06"
+        ></Image>
       </Carousel.Item>
     </Carousel>
 
       <div id={styles.minibanners}>
         <div className={styles.mnBanner}>
-          <img src="/images/teste1.png"/>
+          <Image src="/images/teste1.png" alt="especiais 1" width="606.61px" height="222.31"></Image>
         </div>
         <div className={styles.mnBanner}>
-          <img src="/images/teste2.png"/>
+          <Image src="/images/teste2.png" alt="especiais 2" width="606.61px" height="222.31"></Image>
         </div> 
       </div>
     </div>

@@ -59,7 +59,7 @@ export default function about() {
         <br/>
 
 
-        <Image src={"/images/CanecaSobre.png"} alt="Caneca pra Empresa" width="500%" height="500%" id={styles.CanecaSobre}></Image><br/>
+        <Image src="/images/CanecaSobre.png" alt="Caneca pra Empresa" width="500%" height="500%" id={styles.CanecaSobre}></Image><br/>
 
 
 
