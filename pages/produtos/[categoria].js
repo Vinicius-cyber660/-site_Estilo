@@ -50,8 +50,8 @@ export default function Categoria(  {item, products}  ){
         {
       
             products.map((_produto, i) => (
-                <Col xs={12} sm={6} md={6} lg={3} xl={3}>
-                    <ProductsSingle product={_produto} key={i} />
+                <Col xs={12} sm={6} md={6} lg={3} xl={3} key={i}>
+                    <ProductsSingle product={_produto} />
                 </Col>
             ))
         }
