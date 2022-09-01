@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from '../../styles/Login.module.css'
 import Link from 'next/link';
-import ApiFire from '../ApiFire';
-import firebaseApp from '../ApiFire';
+import ApiFire from '../../components/ApiFire';
+import firebaseApp from '../../components/ApiFire';
 
 export default function onReceiveGoogle() {
 
