@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ApiFire from '../ApiFire';
 import firebaseApp from '../ApiFire';
 
-export default ({onReceiveGoogle}) => {
+export default function onReceiveGoogle() {
 
     const actionLoginGoogle = async () => {
         let result = await ApiFire.googleLogar();
@@ -24,9 +24,7 @@ export default ({onReceiveGoogle}) => {
         }else{
             alert('error');
         }
-    }
-
-    
+    }  
 
     return(<>
         <div id={styles.login}>

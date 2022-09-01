@@ -23,11 +23,29 @@ export default function login(){
         
     }
 
+    const actionLoginDataFacebook = async (u) => {
+        let newUser = {
+            id: u.uid,
+            name: u.displayName,
+            avatar: u.photoURL
+        }
+
+        setUser(newUser)
+        
+    }
+
     if(user === null){
         return(
-        <Loginn onReceiveGoogle={actionLoginDataGoogle} />
+        <Loginn onReceiveGoogle={actionLoginDataFacebook} />
         );
     }
+    
+    if(user === null){
+        return(
+            <Loginn onReceiveFacebook={actionLoginDataFacebook}/>
+        );
+    }
+    
 
     return(<>
 
