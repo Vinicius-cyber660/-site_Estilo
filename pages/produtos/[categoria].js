@@ -48,11 +48,11 @@ export default function Categoria(  {item, products}  ){
     <div id={styles.corpo}>
         <Row>
             {
-            products.map((_produto, index) => (
-                <Col xs={12} sm={6} md={6} lg={3} xl={3} key={index}>
-                    <ProductsSingle product={_produto}/>
-                </Col>
-            ))
+                products.map((_produto, index) => {
+                    <Col xs={12} sm={6} md={6} lg={3} xl={3}>
+                        <ProductsSingle product={_produto} key={index}/>
+                    </Col>
+                })
             }
         </Row>
     </div>
