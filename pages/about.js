@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Paginas.module.css'
+import Image from 'next/image'
 
 export default function about() {
     return <>
@@ -58,7 +59,7 @@ export default function about() {
         <br/>
 
 
-        <img src="/images/CanecaSobre.png" id={styles.CanecaSobre}/><br/>
+        <Image src={"/images/CanecaSobre.png"} width="500%" height="500%" id={styles.CanecaSobre}></Image><br/>
 
 
 

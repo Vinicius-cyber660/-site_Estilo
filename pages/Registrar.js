@@ -5,7 +5,7 @@ export default function Registrar(){
     return(
         <>
         <div id={styles.login}>
-            <h1><Link href="/login"><i className={"fa-solid fa-chevron-left"} id={styles.arrow}></i></Link>Crie sua conta</h1>
+            <h1><Link href="/Login"><i className={"fa-solid fa-chevron-left"} id={styles.arrow}></i></Link>Crie sua conta</h1>
             <p id={styles.conta}>Crie sua conta é grátis</p>
 
             <form>
@@ -25,7 +25,7 @@ export default function Registrar(){
                 </button>
                 <div className={styles.FooterLogin}>
                 Já tem uma conta?
-                <Link href="../login">Faça login</Link>
+                <Link href="../Login">Faça login</Link>
             </div>
             </form>
         </div>

@@ -277,11 +277,11 @@ export default function Navbar(){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
       <div id={styles.iconesao}>
         <div id={styles.icones}>
-          <Link href="/login">
+          <Link href="/Login">
             <i className={"fa-regular fa-circle-user fa-1x"}></i>
           </Link>
           <div id={styles.entrar}>
-            <p>Bem-vindo(a) <br/> <strong><Link href="/login">Entrar</Link></strong> ou <strong><Link href="../Registrar">Cadastrar</Link></strong></p>
+            <p>Bem-vindo(a) <br/> <strong><Link href="/Login">Entrar</Link></strong> ou <strong><Link href="../Registrar">Cadastrar</Link></strong></p>
           </div>
           <Link href="/carrinho">
             <i className={"fa-solid fa-cart-shopping"}></i>
