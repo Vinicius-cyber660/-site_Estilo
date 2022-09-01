@@ -35,11 +35,9 @@ export async function getStaticProps({params}) {
 
 export default function Produto(  {item, produtos}  ){
     const router = useRouter()
-    console.log(produtos);
     const { slug } = router.query
 
     let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
-    console.log(item?.imagem);
     return <>
     <div className={styles.corpo}>
         <div id={styles.teste}>
@@ -116,6 +114,8 @@ export default function Produto(  {item, produtos}  ){
         </p>
     </div>
     <h2 id={styles.aproveite}>Aproveite também</h2>
-    <ProductsCarousel itens={produtos_categoria}/>
+    <div className="carrosel" key={item?.id}>
+        <ProductsCarousel itens={produtos_categoria}/>
+    </div>
     </>
 }

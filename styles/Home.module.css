@@ -29,13 +29,15 @@
 @media (min-width: 340px) and (max-width: 844.99px){
   #minibanners{
     display: flex;
-    flex-direction: column;
   }
   #minibanners img{
     margin: 5px 8px;
     border-radius: 15px;
     display: flex;
     width: 97%;
+  }
+  .mnBanner{
+
   }
 }
 

@@ -56,22 +56,22 @@ export default function Home({produtos, categorias}){
     </Carousel>
 
       <div id={styles.minibanners}>
-        <div>
+        <div className={styles.mnBanner}>
           <img src="/images/teste1.png"/>
         </div>
-        <div>
+        <div className={styles.mnBanner}>
           <img src="/images/teste2.png"/>
         </div> 
       </div>
     </div>
     {
-      categorias.map((categoria) => {
+      categorias.slice(0,5).map((categoria) => {
         console.log(categoria);
         let _produtos = produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id )
         console.log(_produtos);
         return <>
-            <Row className="text-center mt-4" id={styles.nomeCar}><h1>{categoria.categoria.descricao}</h1></Row>
-            <ProductsCarousel itens={_produtos}/>
+          <Row className="text-center mt-4" id={styles.nomeCar}><h1>{categoria.categoria.descricao}</h1></Row>
+          <ProductsCarousel itens={_produtos}/>
         </>
       })
     }

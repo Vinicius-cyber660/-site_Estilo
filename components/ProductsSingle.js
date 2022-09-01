@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function ProductsSingle(product){
     return(
-        <Link href={"/produto/" + product.product?.nome }>
+        <Link href={"/produto/" + product.product?.produto.descricao }>
             <div className={styles.produto} id={styles.delimitador}>
                 <img src={product.product?.produto.imagem[0].link}/>
                 <h4>{product.product?.produto.descricao}</h4>

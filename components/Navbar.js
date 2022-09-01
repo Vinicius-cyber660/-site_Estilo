@@ -281,7 +281,7 @@ export default function Navbar(){
             <i className={"fa-regular fa-circle-user fa-1x"}></i>
           </Link>
           <div id={styles.entrar}>
-            <p>Bem-vindo(a) <br/> <strong><Link href="/login">Entrar</Link></strong> ou <strong><Link href="/login">Cadastrar</Link></strong></p>
+            <p>Bem-vindo(a) <br/> <strong><Link href="/login">Entrar</Link></strong> ou <strong><Link href="../Registrar">Cadastrar</Link></strong></p>
           </div>
           <Link href="/carrinho">
             <i className={"fa-solid fa-cart-shopping"}></i>
