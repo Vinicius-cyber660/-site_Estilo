@@ -29,11 +29,11 @@ export async function getStaticProps({params}) {
 
     /* para cada página, mande (retorne) para página Categoria um item de categorias
     cujo nome seja igual ao parametro passado pela getStaticPaths */
-    const item = categorias.find(_categoria => _categoria.categoria.descricao === params.categoria);
+    const item = categorias?.find(_categoria => _categoria.categoria.descricao === params.categoria);
 
     const p_res = await fetch(`https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S`);
     const resp = await p_res.json();
-    const products = resp.retorno.produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
+    const products = resp?.retorno.produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
     return { props: { item, products } }
 }  
 
