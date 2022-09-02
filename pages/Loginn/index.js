@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ApiFire from '../../components/ApiFire';
 import firebaseApp from '../../components/ApiFire';
 
-export default function onReceiveGoogle() {
+export default ({onReceiveGoogle}) => {
 
     const actionLoginGoogle = async () => {
         let result = await ApiFire.googleLogar();

@@ -1,0 +1,42 @@
+.imagem{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.item img{
+    width: 100%;
+}
+
+.setas{
+    width: 25%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.setas:hover{
+    opacity: 0.5;
+}
+
+.carousel{
+    width: 90%;
+    height: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.divseta{
+    width: 100%;
+}
+
+.setasBotão{
+    background-color: transparent;
+    border: none;
+}

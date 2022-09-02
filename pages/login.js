@@ -36,7 +36,7 @@ export default function Login(){
 
     if(user === null){
         return(
-        <Loginn onReceiveGoogle={actionLoginDataFacebook} />
+        <Loginn onReceiveGoogle={actionLoginDataGoogle} />
         );
     }
 

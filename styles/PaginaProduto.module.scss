@@ -1,6 +1,6 @@
 @media (min-width: 1221px){
     .corpo{
-        margin: 10px 8% !important;
+        margin: 48px 8% !important;
         display: flex;
     }
 }
@@ -8,7 +8,7 @@
 @media (min-width: 1024.99px) and (max-width: 1220.99px){
     .corpo{
         display: flex;
-        margin: 10px 1% !important;
+        margin: 48px 1% !important;
     }
 }
 
@@ -31,7 +31,7 @@
 }
 
 .corpo{
-    margin: 10px 8%;
+    margin: 48px 8%;
 }
 
 #about{
@@ -199,4 +199,12 @@
 #aproveite{
     color: purple;
     text-align: center;
+}
+
+#carVertical{
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    position: relative;
+    top: -39px;
 }

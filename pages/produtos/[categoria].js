@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { Row, Col } from 'react-bootstrap';
 import ProductsSingle from '../../components/ProductsSingle'
+import styles from '../../styles/Produtos.module.css'
 
 /* cria todas as rotas possíveis */
 export async function getStaticPaths() {
@@ -42,19 +43,20 @@ export default function Categoria(  {item, products}  ){
     const router = useRouter()
 
     return <>
-    <h1>Categorias de { item.categoria.descricao }</h1>
-    <h3>Aproveite</h3>
-    <br></br>
-    
-    <Row>
-        {
-      
-            products.map((_produto, i) => (
-                <Col xs={12} sm={6} md={6} lg={3} xl={3} key={i}>
-                    <ProductsSingle product={_produto} />
-                </Col>
-            ))
-        }
-    </Row>
+    <div id={styles.corpo}>
+        <h1 className={styles.titulo}>Categorias de { item.categoria.descricao }</h1>
+        <br></br>
+        
+        <Row>
+            {
+        
+                products.map((_produto, i) => (
+                    <Col xs={12} sm={6} md={6} lg={3} xl={3} key={i}>
+                        <ProductsSingle product={_produto} />
+                    </Col>
+                ))
+            }
+        </Row>
+    </div>
     </>
 }

@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import ProductsCarousel from '../../components/ProductCarousel';
+import VerticalCarousel from '../../components/VerticalCarousel';
 
 export async function getStaticPaths() {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
@@ -39,14 +40,12 @@ export default function Produto(  {item, produtos}  ){
 
     let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
     return <>
+    
     <div className={styles.corpo}>
+        <div id={styles.carVertical}>
+            <VerticalCarousel/>
+        </div>
         <div id={styles.teste}>
-            <div id={styles.MiniProduto}>
-                <img className={styles.carrossel} src={item?.imagem[5]?.link}/>
-                <img className={styles.carrossel} src={item?.imagem[4]?.link}/>
-                <img className={styles.carrossel} src={item?.imagem[3]?.link}/>
-                <img className={styles.carrossel} src={item?.imagem[1]?.link}/>
-            </div>
             <div id={styles.Produto}>
                 <img src={item?.imagem[2]?.link}/>
             </div> 
