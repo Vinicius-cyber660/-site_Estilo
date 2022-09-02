@@ -28,7 +28,7 @@ export async function getStaticProps({params}) {
     const resjson = await res.json();
     const produtos = resjson?.retorno.produtos
 
-    const item = produtos.find(_produto => _produto.produto.descricao === params.slug).produto;
+    const item = produtos?.find(_produto => _produto.produto.descricao === params.slug).produto;
 
     return { props: { item , produtos} }
 }  
