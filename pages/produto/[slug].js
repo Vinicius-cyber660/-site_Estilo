@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}) {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S');
     const resjson = await res.json();
-    const produtos = resjson.retorno.produtos
+    const produtos = resjson?.retorno.produtos
 
     const item = produtos.find(_produto => _produto.produto.descricao === params.slug).produto;
 
