@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}) {
     const _res = await fetch(`https://bling.com.br/Api/v2/categorias/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc`);
     const resc = await _res.json();
-    const categorias = resc.retorno.categorias;
+    const categorias = resc?.retorno.categorias;
 
     /* para cada página, mande (retorne) para página Categoria um item de categorias
     cujo nome seja igual ao parametro passado pela getStaticPaths */
