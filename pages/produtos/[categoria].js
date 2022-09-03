@@ -19,12 +19,12 @@ export async function getStaticPaths() {
             categoria: _categoria.categoria.descricao
         }
     }));
-    return { paths, fallback: false }
+    return { paths, fallback: 'blocking' }
 }
 
 
 /* para cada página possivel, vai pegar as propriedades (categorias do server) */
-export async function getStaticProps({params}) {
+export async function getStaticProps({params=null}) {
     /* para cada página, mande (retorne) para página Categoria um item de categorias
     cujo nome seja igual ao parametro passado pela getStaticPaths */
     const item = await getCategoriaByName(params.categoria);

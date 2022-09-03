@@ -18,7 +18,7 @@ export async function getStaticPaths() {
             slug: _produto.produto.descricao,
         }
     }));
-    return { paths, fallback: false }
+    return { paths, fallback: 'blocking' }
 }
 
 export async function getStaticProps({params}) {
@@ -29,7 +29,7 @@ export async function getStaticProps({params}) {
 }  
 
 
-export default function Produto(  {item, produtos}  ){
+export default function Produto(  {item=null, produtos=null}  ){
     const router = useRouter()
     const { slug } = router.query
 
