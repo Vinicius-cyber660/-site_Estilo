@@ -38,7 +38,7 @@ export default function Produto(  {item, produtos}  ){
     const router = useRouter()
     const { slug } = router.query
 
-    let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
+    let produtos_categoria = produtos?.filter((produto) => produto.produto.categoria.id == item.categoria.id);
     return <>
     
     <div className={styles.corpo}>
