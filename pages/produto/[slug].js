@@ -14,7 +14,7 @@ export async function getStaticPaths() {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
     const resjson = await res.json();
 
-    const produtos = resjson?.retorno.produtos;
+    const produtos = resjson.retorno.produtos;
     const paths = produtos.map(_produto => ({
         params: {
             slug: _produto.produto.descricao,
@@ -26,9 +26,9 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}) {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S');
     const resjson = await res.json();
-    const produtos = resjson?.retorno.produtos
+    const produtos = resjson.retorno.produtos
 
-    const item = produtos?.find(_produto => _produto.produto.descricao === params.slug).produto;
+    const item = produtos.find(_produto => _produto.produto.descricao === params.slug).produto;
 
     return { props: { item , produtos} }
 }  
@@ -38,7 +38,7 @@ export default function Produto(  {item, produtos}  ){
     const router = useRouter()
     const { slug } = router.query
 
-    let produtos_categoria = produtos?.filter((produto) => produto.produto.categoria.id == item.categoria.id);
+    let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
     return <>
     
     <div className={styles.corpo}>
@@ -47,7 +47,7 @@ export default function Produto(  {item, produtos}  ){
         </div>
         <div id={styles.teste}>
             <div id={styles.Produto}>
-                <img src={item?.imagem[0]?.link}/>
+                <img src={item?.imagem[2]?.link}/>
             </div> 
         </div>
         <div id={styles.detalhes}>
