@@ -19,7 +19,7 @@ export async function getStaticPaths() {
             categoria: _categoria.categoria.descricao
         }
     }));
-    return { paths, fallback: 'blocking' }
+    return { paths, fallback: true }
 }
 
 

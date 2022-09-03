@@ -18,7 +18,7 @@ export async function getStaticPaths() {
             slug: _produto.produto.descricao,
         }
     }));
-    return { paths, fallback: 'blocking' }
+    return { paths, fallback: true }
 }
 
 export async function getStaticProps({params}) {
