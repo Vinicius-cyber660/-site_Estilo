@@ -38,6 +38,10 @@ export async function getStaticProps({params}) {
 export default function Categoria(  {item, products}  ){
     const router = useRouter()
 
+    if (router.isFallback) {
+        return <div>Carregando...</div>
+    }
+
     return <>
     <div id={styles.corpo}>
         <h1 className={styles.titulo}>Categorias de { item.descricao }</h1>

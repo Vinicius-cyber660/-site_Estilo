@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}) {
     const produtos = await getProdutosComImagem();
     const item = await getProdutoComImagemByName(params.slug)
-    
+
     return { props: { item , produtos} }
 }  
 
@@ -34,6 +34,11 @@ export default function Produto(  {item, produtos}  ){
     const { slug } = router.query
 
     let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
+    
+    if (router.isFallback) {
+        return <div>Carregando...</div>
+    }
+    
     return <>
     
     <div className={styles.corpo}>

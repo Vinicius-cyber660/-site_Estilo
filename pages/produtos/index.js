@@ -30,6 +30,9 @@ export default function Productss({produtos}){
     );
   }
 
+  if (router.isFallback) {
+    return <div>Carregando...</div>
+  }
 
   return (<>
   <div id={styles.corpo}>
