@@ -6,7 +6,7 @@ import ProductsSingle from '../../components/ProductsSingle';
 import Pagination from 'react-bootstrap/Pagination';
 import { useState } from 'react';
 import { getProdutosComImagem } from '../../services/ProdutosService';
-
+import { useRouter } from 'next/router'
 
 export async function getStaticProps() {
     const produtos = await getProdutosComImagem();
@@ -15,6 +15,11 @@ export async function getStaticProps() {
 }  
 
 export default function Productss({produtos}){
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Carregando...</div>
+  }
+
   const [active, setActive] = useState(1);
   const produtos_por_pagina = 8;
 
@@ -28,10 +33,6 @@ export default function Productss({produtos}){
         {number}
       </Pagination.Item>,
     );
-  }
-
-  if (router.isFallback) {
-    return <div>Carregando...</div>
   }
 
   return (<>
