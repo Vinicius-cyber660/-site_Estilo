@@ -9,12 +9,10 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import ProductsCarousel from '../../components/ProductCarousel';
 import VerticalCarousel from '../../components/VerticalCarousel';
+import { getProdutos, getProdutosComImagem, getProdutoComImagemByName } from '../../services/ProdutosService';
 
 export async function getStaticPaths() {
-    const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
-    const resjson = await res.json();
-
-    const produtos = resjson.retorno.produtos;
+    const produtos = await getProdutos();
     const paths = produtos.map(_produto => ({
         params: {
             slug: _produto.produto.descricao,
@@ -24,12 +22,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S');
-    const resjson = await res.json();
-    const produtos = resjson.retorno.produtos
-
-    const item = produtos.find(_produto => _produto.produto.descricao === params.slug).produto;
-
+    const produtos = await getProdutosComImagem();
+    const item = await getProdutoComImagemByName(params.slug)
+    
     return { props: { item , produtos} }
 }  
 
@@ -43,7 +38,7 @@ export default function Produto(  {item, produtos}  ){
     
     <div className={styles.corpo}>
         <div id={styles.carVertical}>
-            <VerticalCarousel/>
+            <VerticalCarousel item={item}/>
         </div>
         <div id={styles.teste}>
             <div id={styles.Produto}>
