@@ -29,7 +29,7 @@ export async function getStaticProps({params}) {
     cujo nome seja igual ao parametro passado pela getStaticPaths */
     const item = await getCategoriaByName(params.categoria);
 
-    const products = await getProdutosFromCategoria(item.id);
+    const products = await getProdutosFromCategoria(item?.id);
     return { props: { item, products } }
 }  
 
@@ -44,13 +44,13 @@ export default function Categoria(  {item, products}  ){
 
     return <>
     <div id={styles.corpo}>
-        <h1 className={styles.titulo}>Categorias de { item.descricao }</h1>
+        <h1 className={styles.titulo}>Categorias de { item?.descricao }</h1>
         <br></br>
         
         <Row>
             {
         
-                products.map((_produto, i) => (
+                products?.map((_produto, i) => (
                     <Col xs={12} sm={6} md={6} lg={3} xl={3} key={i}>
                         <ProductsSingle product={_produto} />
                     </Col>

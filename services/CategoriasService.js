@@ -6,7 +6,7 @@ export async function getCategorias() {
 }
 export async function getCategoriaByName(name) {
     const categorias = await getCategorias();
-    const item = categorias?.find(_categoria => _categoria.categoria.descricao === name).categoria;
+    const item = categorias.find(_categoria => _categoria.categoria.descricao === name).categoria;
 
     return item;
 }
