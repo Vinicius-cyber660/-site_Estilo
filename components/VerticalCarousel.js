@@ -1,8 +1,9 @@
 import styles from '../styles/VerticalCarousel.module.css'
 import { useRef } from 'react';
+import { useRouter } from 'next/router'
 
 
-export default function VerticalCarousel({itens}){
+export default function VerticalCarousel({item}){
     const carousel = useRef(null);
 
     const handleTopClick = (e) =>{
@@ -25,7 +26,7 @@ export default function VerticalCarousel({itens}){
     <div className={styles.carousel} ref={carousel}>    
         <div className={styles.item}>
             <div className={styles.imagem}>
-                <img src="/images/550x550.png"/>
+                <img src={item?.imagem[0]?.link}/>
             </div>
             <div className={styles.imagem}>
                 <img src="/images/550x550.png"/>

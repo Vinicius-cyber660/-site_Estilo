@@ -47,7 +47,7 @@ export default function Produto(  {item, produtos}  ){
         </div>
         <div id={styles.teste}>
             <div id={styles.Produto}>
-                <img src={item?.imagem[2]?.link}/>
+                <img src={item?.imagem[0]?.link}/>
             </div> 
         </div>
         <div id={styles.detalhes}>
