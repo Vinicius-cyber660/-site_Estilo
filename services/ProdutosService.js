@@ -14,14 +14,14 @@ export async function getProdutosComImagem() {
 
 export async function getProdutoComImagemByName(name) {
     const produtos = await getProdutosComImagem();
-    const item = produtos.find(_produto => _produto.produto.descricao === name).produto;
+    const item = produtos?.find(_produto => _produto.produto.descricao === name).produto;
 
     return item;
 }
 
 export async function getProdutosFromCategoria(categoria_id) {
     const produtos = await getProdutosComImagem();
-    const itens = produtos.filter((produto) => produto.produto.categoria.id == categoria_id);
+    const itens = produtos?.filter((produto) => produto.produto.categoria.id == categoria_id);
 
     return itens;
 }
