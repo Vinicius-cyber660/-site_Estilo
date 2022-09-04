@@ -3,12 +3,24 @@
         margin: 48px 8% !important;
         display: flex;
     }
+    #carHorizontal{
+        display: none !important;
+    }
+    #CELtitulo{
+        display: none;
+    }
 }
 
 @media (min-width: 1024.99px) and (max-width: 1220.99px){
     .corpo{
         display: flex;
         margin: 48px 1% !important;
+    }
+    #carHorizontal{
+        display: none !important;
+    }
+    #CELtitulo{
+        display: none;
     }
 }
 
@@ -18,6 +30,13 @@
         margin-left: auto;
         margin-right: auto;
     }
+    #carVertical{
+        display: none !important;
+    }
+    #PCtitulo{
+        display: none;
+    }
+    
 }
 
 @media (max-width: 1023.99px){
@@ -27,6 +46,12 @@
 
     #detalhes p{
         text-align: center;
+    }
+    #carVertical{
+        display: none !important;
+    }
+    #PCtitulo{
+        display: none;
     }
 }
 
@@ -207,4 +232,18 @@
     width: 21%;
     position: relative;
     top: -39px;
+}
+
+#carHorizontal{
+    display: flex;
+    position: relative;
+    margin: 0px -3%;
+    width: 102%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#CELtitulo{
+    text-align: center;
+    color: purple;
 }

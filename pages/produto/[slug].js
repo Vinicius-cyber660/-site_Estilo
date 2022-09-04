@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import ProductsCarousel from '../../components/ProductCarousel';
 import VerticalCarousel from '../../components/VerticalCarousel';
+import HorizontalCarousel from '../../components/HorizontalCarousel';
 
 export async function getStaticPaths() {
     const res = await fetch('https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc');
@@ -34,24 +35,34 @@ export async function getStaticProps({params}) {
 }  
 
 
+
+
 export default function Produto(  {item, produtos}  ){
     const router = useRouter()
     const { slug } = router.query
 
     let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
+    let produtos_imagens = produtos.filter((produto) => produto.produto.imagem == item.imagem);
+
+    const qntdd = useRef(null);
+
     return <>
     
     <div className={styles.corpo}>
         <div id={styles.carVertical}>
-            <VerticalCarousel/>
+            <VerticalCarousel item={item}/>
         </div>
         <div id={styles.teste}>
             <div id={styles.Produto}>
-                <img src={item?.imagem[2]?.link}/>
+                <h1 id={styles.CELtitulo}>{item?.descricao}</h1>
+                <img src={item?.imagem[0]?.link}/>
             </div> 
         </div>
+        <div id={styles.carHorizontal}>
+            <HorizontalCarousel item={item}/>
+        </div>
         <div id={styles.detalhes}>
-            <h1>{item?.descricao}</h1>
+            <h1 id={styles.PCtitulo}>{item?.descricao}</h1>
             <hr/>
             <h2>R$28,00</h2>
             <p>até <strong>3x</strong> de <strong>R$9.33</strong> sem juros</p>
@@ -82,6 +93,7 @@ export default function Produto(  {item, produtos}  ){
                     type="number"
                     defaultValue="1"
                     aria-describedby="basic-addon2"
+                    ref={qntdd}
                     />
                     <Button variant="outline-secondary" className={styles.mais} id="button-addon2">
                     +
