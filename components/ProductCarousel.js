@@ -3,7 +3,8 @@ import Carousel2 from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import ProductsC from './ProductC';
 
   export default function ProductsCarousel({itens}){
 
@@ -35,17 +36,7 @@ import { useEffect } from 'react';
         {
           itens?.map((item) => {
             return <>
-              <Link href={"/produto/" + item?.produto.descricao}>
-                <div className={styles.Pmaisvendidos}>
-                  <div className={styles.produto} id={styles.delimitador}>
-                      <img src={item?.produto?.imagem[0]?.link}/>
-                      <h4>{item?.produto.descricao}</h4>
-                      <h3 className={styles.preço}>{Number.parseFloat(item?.produto.preco).toFixed(2)}</h3>
-                      <p>até <strong>3x</strong> de <strong>R$ 9,33</strong> sem juros</p>
-                      <Button variant="success" className={styles.comprar}>Comprar</Button>
-                  </div>
-                </div>
-              </Link>
+              <ProductsC item={item}/>
             </>
           })
         }

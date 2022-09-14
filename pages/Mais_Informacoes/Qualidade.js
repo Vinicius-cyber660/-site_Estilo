@@ -1,7 +1,11 @@
+import Head from "next/head";
+
 export default function Qualidade() {
     return (
         <>
-        <title>Qualidade</title>
+        <Head>
+            <title>Estilo Criação: Qualidade</title>
+        </Head>
         <h1>Qualidade</h1>
         </>
     );

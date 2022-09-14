@@ -1,7 +1,11 @@
+import Head from "next/head";
+
 export default function Politica_de_Devolucao() {
     return (
-        <>    
-        <title>Política de Devolução</title>
+        <>  
+        <Head>  
+            <title>Estilo Criação: Política de Devolução</title>
+        </Head>
         <h1>Política de Devolução</h1>
         </>
     );

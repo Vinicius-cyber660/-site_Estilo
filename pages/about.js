@@ -5,6 +5,9 @@ import Image from 'next/image'
 
 export default function about() {
     return <>
+    <Head>
+        <title>Estilo Criação: Sobre Nós</title>
+    </Head>
     <div className={styles.corpo}>
         <h2 id={styles.about}>Sobre Nós</h2>
         <p id={styles.bemVindo}>bem-vindo(a) á Estilo Criação</p>

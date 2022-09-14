@@ -4,6 +4,7 @@ import ProductsSingle from '../../components/ProductsSingle'
 import { getCategoriaByName } from '../../services/CategoriasService';
 import { getProdutosFromCategoria } from '../../services/ProdutosService';
 import styles from '../../styles/Produtos.module.css'
+import Head from 'next/head';
 
 /* cria todas as rotas possíveis */
 export async function getStaticPaths() {
@@ -43,8 +44,11 @@ export default function Categoria(  {item, products}  ){
     }
 
     return <>
+    <Head>
+        <title>Estilo Criação: { item?.descricao }</title>
+    </Head>
     <div id={styles.corpo}>
-        <h1 className={styles.titulo}>Categorias de { item?.descricao }</h1>
+        <h1 className={styles.titulo}>Categoria { item?.descricao }</h1>
         <br></br>
         
         <Row>

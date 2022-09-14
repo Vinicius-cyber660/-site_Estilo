@@ -70,4 +70,32 @@
     -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+}
+
+#carrinho{
+    text-align: center;
+}
+
+#compras{
+    border: none;
+    background-color: rgb(46, 210, 40);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#compras:hover{
+    background-color: rgb(33, 255, 25);
+}
+
+#àsCompras{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.corpo{
+    padding: 8% 10%;
+}

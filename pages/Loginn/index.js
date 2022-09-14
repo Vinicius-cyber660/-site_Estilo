@@ -3,6 +3,7 @@ import styles from '../../styles/Login.module.css'
 import Link from 'next/link';
 import ApiFire from '../../components/ApiFire';
 import firebaseApp from '../../components/ApiFire';
+import Head from 'next/head';
 
 export default ({onReceiveGoogle}) => {
 
@@ -27,6 +28,10 @@ export default ({onReceiveGoogle}) => {
     }  
 
     return(<>
+        <Head>
+            <title>Estilo Criação: Login</title>
+        </Head>
+        
         <div id={styles.login}>
             <h1>Faça login em sua conta</h1>
             <button id={styles.botãoFace} onClick={actionLoginFacebook}><i className={"fa-brands fa-square-facebook fa-lg"}></i><div className={styles.center}>Fazer login com o Facebook</div></button>

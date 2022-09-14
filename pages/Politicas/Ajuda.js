@@ -5,7 +5,7 @@ export default function Ajuda() {
     return (
         <>
             <Head>
-                <title>Ajuda</title>
+                <title>Estilo Criação: Ajuda</title>
             </Head>
             <h1>Ajuda</h1>
         </>

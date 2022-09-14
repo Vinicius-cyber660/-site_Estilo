@@ -1,8 +1,33 @@
-export default function Termos_e_Condicoes() {
+import React, { Component } from 'react';
+import { cpfMask } from '../../components/cpfMask'
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { documentId: '' }
+    this.handlechange = this.handlechange.bind(this)
+  }
+
+  handlechange(e) {
+
+    this.setState({ documentId: cpfMask(e.target.value) })
+  }
+
+  render() {
+    const { documentId } = this.state
     return (
-        <>    
-        <title>Termos e Condições</title>
-        <h1>Termos e Condições</h1>
-        </>
-    );
+      <div className="App">
+        <label>CPF</label>
+        <input 
+          maxLength='14'
+          name='documentId'
+          value={documentId}
+          onChange={this.handlechange}
+        />
+      </div>
+    )
+  }
 }
+
+export default App;

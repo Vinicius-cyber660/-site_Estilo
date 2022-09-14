@@ -5,6 +5,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { useEffect } from 'react';
 import Facebook from '../components/Facebook';
 import Loginn from './Loginn/index'
+import Head from 'next/head';
 
 const clientId = "679462750159-7ragf3niqd3bn0629tmpttj18o3ehel2.apps.googleusercontent.com"
 
@@ -48,7 +49,9 @@ export default function Login(){
     
 
     return(<>
-
+            <Head>
+                <title>Estilo Criação: Login</title>
+            </Head>
             <div id={styles.login}>
                 <h1>Você já está logado</h1>
             </div>

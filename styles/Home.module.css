@@ -123,6 +123,12 @@
   width: 100%;
 }
 
+.comprar:hover{
+  background-color: #4fc11e;
+  border: none;
+  width: 100%;
+}
+
 .arrow{
   min-width: 20%;
 }
@@ -154,4 +160,8 @@
 
 #nomeCar{
   margin-right: 0px;
+}
+
+#banner2{
+  cursor: pointer;
 }

@@ -22,11 +22,10 @@ export async function getStaticProps() {
 }  
 
 export default function Home({produtos, categorias}){
-  console.log(categorias);
   return(
     <>
     <Head>
-      <title>Página Principal</title>
+      <title>Estilo Criação: Página Principal</title>
       <meta name="keyworkds" content="Caneca, Personalizado"></meta>
     </Head>
     
@@ -40,11 +39,14 @@ export default function Home({produtos, categorias}){
         />
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="/images/Banner2.png"
-          alt="Second slide"
-        />
+        <Link href="/produtos/Com Foto">
+          <img
+            className="d-block w-100"
+            id={styles.banner2}
+            src="/images/Banner2.png"
+            alt="Second slide"
+          />
+        </Link>
       </Carousel.Item>
       <Carousel.Item>
         <img

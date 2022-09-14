@@ -1,7 +1,11 @@
+import Head from "next/head";
+
 export default function NossoContato() {
     return (
         <>
-        <title>Nosso Contato</title>
+        <Head>
+            <title>Estilo Criação: Nosso Contato</title>
+        </Head>
         <h1>Nosso Contato</h1>
         </>
     );

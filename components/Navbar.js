@@ -61,7 +61,7 @@ function BasicExample() {
 
 
 
-export default function Navbar(){
+export default function Navbar(props){
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -73,6 +73,8 @@ export default function Navbar(){
     const categoryHandle = () => {
         setShowCategory(!showCategory);
     }
+
+    const [search, setSearch] = useState("");
 
     return(<>
     
@@ -262,15 +264,22 @@ export default function Navbar(){
       <div id={styles.pesquisao}>
         <div className={styles.pesquisa}>
           <InputGroup className={styles.pesquisas}>
-            <Form.Control
-              id={styles.pesquisar}
-              placeholder="pesquisar..."
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
-            />
-            <Button variant="outline-secondary"  id={styles.botão}>
-              <i className={"fa-solid fa-magnifying-glass"} id={styles.lupa}></i>
-            </Button>
+            <form action="" id={styles.form}>
+              <Form.Control
+                id={styles.pesquisar}
+                placeholder="pesquisar..."
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                type="text"
+                name="search"
+                onChange={e => setSearch(e.target.value)}
+              />
+              
+              <Button type="submit" variant="outline-secondary"  id={styles.botão}>
+                <i className={"fa-solid fa-magnifying-glass"} id={styles.lupa}></i>
+              </Button>
+              
+            </form>       
           </InputGroup>
         </div>
       </div>

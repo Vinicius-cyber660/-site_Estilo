@@ -207,11 +207,13 @@
 
 #teste{
     display: flex;
+    width: 100%;
 }
 
 #descrição h1{
     color: purple;
-    margin-left: 25%;
+    width: 55%;
+    text-align: center;
 }
 
 #descrição p{
@@ -246,4 +248,46 @@
 #CELtitulo{
     text-align: center;
     color: purple;
+}
+
+.mais:focus,
+.mais.focus {
+    box-shadow: 0 0 0 0rem rgba(248, 249, 250, 0.5);
+}
+
+.mais.disabled,
+.mais:disabled {
+    color: #f8f9fa;
+    background-color: transparent;
+}
+.menos:focus,
+.menos.focus {
+    box-shadow: 0 0 0 0rem rgba(248, 249, 250, 0.5);
+}
+
+.menos.disabled,
+.menos:disabled {
+    color: #f8f9fa;
+    background-color: transparent;
+
+}
+#pesquisa:focus,
+#pesquisa.focus {
+    box-shadow: 0 0 0 0rem;
+    border: rgb(155, 154, 154);
+    border: solid 0.5px #ccc;
+}
+
+#pesquisa.disabled,
+#pesquisa:disabled {
+    color: #ccc;
+    background-color: transparent;
+}
+
+#descricaoCurta p{
+    margin-bottom: -1px;
+}
+
+#descricaoCurta{
+    margin-bottom: 40px;
 }
