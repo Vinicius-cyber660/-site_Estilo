@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { Row, Col } from 'react-bootstrap';
 import ProductsSingle from '../../components/ProductsSingle'
-import { getCategoriaByName } from '../../services/CategoriasService';
+import { getCategoriaByName, getCategorias } from '../../services/CategoriasService';
 import { getProdutosFromCategoria } from '../../services/ProdutosService';
 import styles from '../../styles/Produtos.module.css'
 import Head from 'next/head';
@@ -9,9 +9,7 @@ import Head from 'next/head';
 /* cria todas as rotas possíveis */
 export async function getStaticPaths() {
     /* pega a lista de categorias do servidor e transforma em objeto do tipo json */
-    const _res = await fetch(`https://bling.com.br/Api/v2/categorias/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc`);
-    const resc = await _res.json();
-    const categorias = resc.retorno.categorias;
+    const categorias = await getCategorias();
 
     /* para cada _categoria, mande (retorne) o nome como parametro para getStaticProps */
     const paths = categorias.map(_categoria => ({
