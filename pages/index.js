@@ -8,17 +8,28 @@ import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductsCarousel from '../components/ProductCarousel';
-import { getProdutosComImagem } from '../services/ProdutosService';
+import { getProdutosComImagem, getProdutosFromCategoria } from '../services/ProdutosService';
 import { getCategorias } from '../services/CategoriasService';
 
 export async function getStaticProps() {
   const produtos = await getProdutosComImagem();
   const categorias = await getCategorias();
 
-  return { props: { produtos, categorias } }
+  let produtos_categorias = [];
+  
+  categorias.slice(0,5).map((categoria) => {
+    produtos_categorias.push(
+      {
+        "categoria": categoria.categoria.descricao, 
+        "produtos": produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id)
+      }
+    )
+  })
+
+  return { props: { produtos_categorias } }
 }  
 
-export default function Home({produtos, categorias}){
+export default function Home({produtos_categorias}){
   return(
     <>
     <Head>
@@ -63,18 +74,15 @@ export default function Home({produtos, categorias}){
         </div> 
       </div>
     </div>
+
     {
-      categorias.slice(0,5).map((categoria) => {
-        console.log(categoria);
-        let _produtos = produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id )
-        console.log(_produtos);
+      produtos_categorias.map((objeto) => {
         return <>
-          <Row className="text-center mt-4" id={styles.nomeCar}><h1>{categoria.categoria.descricao}</h1></Row>
-          <ProductsCarousel itens={_produtos}/>
+          <Row className="text-center mt-4" id={styles.nomeCar}><h1>{objeto.categoria}</h1></Row>
+          <ProductsCarousel itens={objeto.produtos}/>
         </>
       })
     }
-
     </>
   )
 }

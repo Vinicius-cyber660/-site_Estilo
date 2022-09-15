@@ -8,33 +8,38 @@ import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductsCarousel from '../components/ProductCarousel';
+import { getProdutosComImagem, getProdutosFromCategoria } from '../services/ProdutosService';
+import { getCategorias } from '../services/CategoriasService';
 
 export async function getStaticProps() {
-    let res = await fetch(`https://bling.com.br/Api/v2/produtos/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc&imagem=S`);
-    const resp = await res.json();
-    const produtos = resp.retorno.produtos;
+    const produtos = await getProdutosComImagem();
+    const categorias = await getCategorias();
+
+    let produtos_categorias = [];
   
-    let _res = await fetch(`https://bling.com.br/Api/v2/categorias/json/&apikey=eda45968702e9e3ff10bb3dbd0fdd14286ecac428363231ed48271ad38fb7067b8578dbc`);
-    const resc = await _res.json();
-    const categorias = resc.retorno.categorias;
+    categorias.map((categoria) => {
+      produtos_categorias.push(
+        {
+          "categoria": categoria.categoria.descricao, 
+          "produtos": produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id)
+        }
+      )
+    })
   
-    return { props: { produtos, categorias } }
+    return { props: { produtos_categorias } }
   }  
 
-export default function colection({produtos, categorias}){
+export default function colection({produtos_categorias}){
     return(
     <>
     <Head>
         <title>Estilo Crição: Coleções</title>
     </Head>
     {
-      categorias.map((categoria) => {
-        console.log(categoria);
-        let _produtos = produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id )
-        console.log(_produtos);
+      produtos_categorias.map((objeto) => {
         return <>
-          <Row className="text-center mt-4" id={styles.nomeCar}><h1>{categoria.categoria.descricao}</h1></Row>
-          <ProductsCarousel itens={_produtos}/>
+          <Row className="text-center mt-4" id={styles.nomeCar}><h1>{objeto.categoria}</h1></Row>
+          <ProductsCarousel itens={objeto.produtos}/>
         </>
       })
     }
