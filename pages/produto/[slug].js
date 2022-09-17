@@ -40,6 +40,8 @@ export default function Produto(  {item, produtos_categoria}  ){
     if (router.isFallback) {
         return <div>Carregando...</div>
     }
+    
+    if(!item || !produtos_categoria) return null
 
     let [num, setNum] = useState(1);
     

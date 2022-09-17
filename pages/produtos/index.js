@@ -21,6 +21,8 @@ export default function Productss({produtos}){
     return <div>Carregando...</div>
   }
 
+  if(!produtos) return null
+
   const [active, setActive] = useState(1);
   const produtos_por_pagina = 16;
 

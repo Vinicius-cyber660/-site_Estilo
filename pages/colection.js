@@ -30,6 +30,7 @@ export async function getStaticProps() {
   }  
 
 export default function colection({produtos_categorias}){
+    if(!produtos_categorias) return null
     return(
     <>
     <Head>

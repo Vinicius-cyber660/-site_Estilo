@@ -30,6 +30,8 @@ export async function getStaticProps() {
 }  
 
 export default function Home({produtos_categorias}){
+  if(!produtos_categorias) return null
+
   return(
     <>
     <Head>

@@ -41,6 +41,8 @@ export default function Categoria(  {item, products}  ){
         return <div>Carregando...</div>
     }
 
+    if(!item || !products) return null
+
     return <>
     <Head>
         <title>Estilo Criação: { item?.descricao }</title>
