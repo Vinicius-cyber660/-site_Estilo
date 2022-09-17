@@ -15,7 +15,7 @@ export default function VerticalCarousel({item}){
         carousel.current.scrollTop += 123;
     }
 
-    console.log(item)
+    /* console.log(item) */
     
     return(
         

@@ -12,10 +12,11 @@ import VerticalCarousel from '../../components/VerticalCarousel';
 import HorizontalCarousel from '../../components/HorizontalCarousel';
 import Head from 'next/head'
 import { ReactDOM } from 'react-dom';
-import { getProdutos, getProdutosComImagem } from '../../services/ProdutosService';
+import { getProdutoComImagemByName, getProdutos, getProdutosComImagem, getProdutosFromCategoria } from '../../services/ProdutosService';
 
 export async function getStaticPaths() {
     const produtos = await getProdutos();
+    
     const paths = produtos.map(_produto => ({
         params: {
             slug: _produto.produto.descricao,
@@ -25,19 +26,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const produtos = await getProdutosComImagem();
+    const item = await getProdutoComImagemByName(params.slug);
+    const produtos_categoria = await getProdutosFromCategoria(item?.categoria.id);
 
-    const item = produtos.find(_produto => _produto.produto.descricao === params.slug).produto;
-
-    return { props: { item , produtos} }
+    return { props: { item, produtos_categoria} }
 }  
     
 
-export default function Produto(  {item, produtos}  ){
+export default function Produto(  {item, produtos_categoria}  ){
     const router = useRouter()
     const { slug } = router.query
-
-    let produtos_categoria = produtos.filter((produto) => produto.produto.categoria.id == item.categoria.id);
     
     if (router.isFallback) {
         return <div>Carregando...</div>

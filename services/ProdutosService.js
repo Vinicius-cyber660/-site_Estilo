@@ -21,6 +21,7 @@ export async function getProdutoComImagemByName(name) {
 
 export async function getProdutosFromCategoria(categoria_id) {
     const produtos = await getProdutosComImagem();
+    console.log('produtoss = ', produtos);
     const itens = produtos.filter((produto) => produto.produto.categoria.id == categoria_id);
 
     return itens;
