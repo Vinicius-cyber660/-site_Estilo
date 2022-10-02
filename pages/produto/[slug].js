@@ -33,14 +33,19 @@ export async function getStaticProps({params}) {
     const produtos_categoria = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
     /* const produtos_categoria = await getProdutosFromCategoria(item?.categoria.id); */
+    const hashed_props = JSON.parse(JSON.stringify({
+        item: item,
+        produtos_categoria: produtos_categoria
+    }))
 
-    return { props: { item, produtos_categoria} }
+    return { props: { hashed_props } }
 }  
     
 
-export default function Produto(  {item, produtos_categoria}  ){
+export default function Produto(  {hashed_props}  ){
     const router = useRouter()
     const { slug } = router.query
+    const {item, produtos_categoria} = hashed_props
     
     if (router.isFallback) {
         return <div>Carregando...</div>

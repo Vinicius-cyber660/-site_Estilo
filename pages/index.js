@@ -13,7 +13,7 @@ export async function getStaticProps() {
   const c_res = await fetch('https://site-estilo-refactored.vercel.app/api/produtos-categoria')
   const produtos_categorias = await c_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
-  return { props: { produtos_categorias } }
+  return { props: { produtos_categorias: JSON.parse(JSON.stringify(produtos_categorias)) } }
 }  
 
 export default function Home({produtos_categorias}){

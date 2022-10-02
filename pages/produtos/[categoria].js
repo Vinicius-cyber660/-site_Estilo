@@ -30,14 +30,22 @@ export async function getStaticProps({params=null}) {
 
     const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria/'+params.categoria+'/produtos')
     const products = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
-    return { props: { item, products } }
+    
+    const hashed_props = JSON.parse(JSON.stringify({
+        item: item,
+        products: products
+    }))
+    
+    return { props: { hashed_props } }
 }  
 
 
 /* recebe o { item } retornado por getStaticProps */
-export default function Categoria(  {item, products}  ){
+export default function Categoria(  {hashed_props}  ){
     const router = useRouter()
 
+    const {item, products} = hashed_props;
+    
     if (router.isFallback) {
         return <div>Carregando...</div>
     }
