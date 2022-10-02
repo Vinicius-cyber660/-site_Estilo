@@ -8,24 +8,11 @@ import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductsCarousel from '../components/ProductCarousel';
-import { getProdutosComImagem, getProdutosFromCategoria } from '../services/ProdutosService';
-import { getCategorias } from '../services/CategoriasService';
 
 export async function getStaticProps() {
-    const produtos = await getProdutosComImagem();
-    const categorias = await getCategorias();
+    const c_res = await fetch('https://site-estilo-refactored.vercel.app/api/produtos-categoria')
+    const produtos_categorias = await c_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
-    let produtos_categorias = [];
-  
-    categorias.map((categoria) => {
-      produtos_categorias.push(
-        {
-          "categoria": categoria.categoria.descricao, 
-          "produtos": produtos.filter((item) => item.produto.categoria.id == categoria.categoria.id)
-        }
-      )
-    })
-  
     return { props: { produtos_categorias } }
   }  
 

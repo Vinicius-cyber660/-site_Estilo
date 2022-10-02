@@ -1,15 +1,14 @@
 import { useRouter } from 'next/router'
 import { Row, Col } from 'react-bootstrap';
 import ProductsSingle from '../../components/ProductsSingle'
-import { getCategoriaByName, getCategorias } from '../../services/CategoriasService';
-import { getProdutosFromCategoria } from '../../services/ProdutosService';
 import styles from '../../styles/Produtos.module.css'
 import Head from 'next/head';
 
 /* cria todas as rotas possíveis */
 export async function getStaticPaths() {
     /* pega a lista de categorias do servidor e transforma em objeto do tipo json */
-    const categorias = await getCategorias();
+    const c_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria')
+    const categorias = await c_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
     /* para cada _categoria, mande (retorne) o nome como parametro para getStaticProps */
     const paths = categorias.map(_categoria => ({
@@ -26,9 +25,11 @@ export async function getStaticPaths() {
 export async function getStaticProps({params=null}) {
     /* para cada página, mande (retorne) para página Categoria um item de categorias
     cujo nome seja igual ao parametro passado pela getStaticPaths */
-    const item = await getCategoriaByName(params.categoria);
+    const i_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria/' + params.categoria)
+    const item = await i_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
-    const products = await getProdutosFromCategoria(item?.id);
+    const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria/'+params.categoria+'/produtos')
+    const products = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
     return { props: { item, products } }
 }  
 

@@ -1,28 +1,23 @@
 import styles from '../../styles/Produtos.module.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import ProductsSingle from '../../components/ProductsSingle';
 import Pagination from 'react-bootstrap/Pagination';
 import { useState } from 'react';
-import { getProdutosComImagem } from '../../services/ProdutosService';
 import { useRouter } from 'next/router'
 import Head from 'next/head';
 
 export async function getStaticProps() {
-    const produtos = await getProdutosComImagem();
+    const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/produto/com-imagem')
+    const produtos = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
   return { props: { produtos } }
 }  
 
 export default function Productss({produtos}){
   const router = useRouter();
-  if (router.isFallback) {
-    return <div>Carregando...</div>
-  }
 
   if(!produtos) return null
-
   const [active, setActive] = useState(1);
   const produtos_por_pagina = 16;
 

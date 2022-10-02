@@ -12,22 +12,27 @@ import VerticalCarousel from '../../components/VerticalCarousel';
 import HorizontalCarousel from '../../components/HorizontalCarousel';
 import Head from 'next/head'
 import { ReactDOM } from 'react-dom';
-import { getProdutoComImagemByName, getProdutos, getProdutosComImagem, getProdutosFromCategoria } from '../../services/ProdutosService';
 
 export async function getStaticPaths() {
-    const produtos = await getProdutos();
+    const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/produto/')
+    const produtos = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
     
     const paths = produtos.map(_produto => ({
         params: {
             slug: _produto.produto.descricao,
         }
     }));
-    return { paths, fallback: false }
+    return { paths, fallback: true }
 }
 
 export async function getStaticProps({params}) {
-    const item = await getProdutoComImagemByName(params.slug);
-    const produtos_categoria = await getProdutosFromCategoria(item?.categoria.id);
+    const i_res = await fetch('https://site-estilo-refactored.vercel.app/api/produto/'+params.slug+'/com-imagem');
+    const item = await i_res.json().then((data) => data.data ).catch((error) => console.log(error));
+
+    const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria/'+item.categoria.descricao+'/produtos/');
+    const produtos_categoria = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
+
+    /* const produtos_categoria = await getProdutosFromCategoria(item?.categoria.id); */
 
     return { props: { item, produtos_categoria} }
 }  
@@ -40,7 +45,7 @@ export default function Produto(  {item, produtos_categoria}  ){
     if (router.isFallback) {
         return <div>Carregando...</div>
     }
-    
+
     if(!item || !produtos_categoria) return null
 
     let [num, setNum] = useState(1);
