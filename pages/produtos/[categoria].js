@@ -17,7 +17,7 @@ export async function getStaticPaths() {
             categoria: _categoria.categoria.descricao
         }
     }));
-    return { paths, fallback: true }
+    return { paths, fallback: false }
 }
 
 

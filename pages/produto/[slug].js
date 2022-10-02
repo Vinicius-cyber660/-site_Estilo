@@ -22,14 +22,14 @@ export async function getStaticPaths() {
             slug: _produto.produto.descricao,
         }
     }));
-    return { paths, fallback: true }
+    return { paths, fallback: false }
 }
 
 export async function getStaticProps({params}) {
     const i_res = await fetch('https://site-estilo-refactored.vercel.app/api/produto/'+params.slug+'/com-imagem');
     const item = await i_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
-    const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria/'+item.categoria.descricao+'/produtos/');
+    const p_res = await fetch('https://site-estilo-refactored.vercel.app/api/categoria/'+item?.categoria.descricao+'/produtos/');
     const produtos_categoria = await p_res.json().then((data) => data.data ).catch((error) => console.log(error));
 
     /* const produtos_categoria = await getProdutosFromCategoria(item?.categoria.id); */
